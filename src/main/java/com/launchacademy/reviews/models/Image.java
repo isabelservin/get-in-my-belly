@@ -15,13 +15,13 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@Table(name="review_images_table")
+@Table(name="review_images")
 @Getter
 @Setter
 @NoArgsConstructor
 public class Image {
   @Id
-  @SequenceGenerator(name="image_generator", sequenceName="images_id_seq", allocationSize = 1)
+  @SequenceGenerator(name="image_generator", sequenceName="review_images_id_seq", allocationSize = 1)
   @GeneratedValue(strategy= GenerationType.SEQUENCE, generator="image_generator")
   @Column(name="id", nullable=false, unique=true)
   private Integer id;

@@ -1,6 +1,8 @@
 package com.launchacademy.reviews.models;
 
+import java.sql.Timestamp;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -33,11 +35,11 @@ public class Review {
   @Column(name = "restaurant_rating")
   private Integer restaurantRating;
 
-  @Column(name = "health_dept_rating")
-  private Integer healthDeptRating;
-
   @Column(name = "review")
   private String review;
+
+  @Column(name="date_posted")
+  private Timestamp datePosted;
 
   @ManyToOne
   @JoinColumn(name = "location_id")
