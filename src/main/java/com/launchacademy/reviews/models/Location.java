@@ -1,5 +1,6 @@
 package com.launchacademy.reviews.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.Column;
@@ -45,11 +46,14 @@ public class Location {
 
   @ManyToOne
   @JoinColumn(name = "restaurant_id")
+  @JsonIgnoreProperties("locations")
   private Restaurant restaurant;
 
   @OneToMany(mappedBy = "location")
+  @JsonIgnoreProperties("location")
   private List<Review> reviews = new ArrayList<>();
 
   @OneToMany(mappedBy = "location")
+  @JsonIgnoreProperties("location")
   private List<Image> images = new ArrayList<>();
 }
