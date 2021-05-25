@@ -1,5 +1,5 @@
-DROP TABLE IF EXISTS review_images_table CASCADE;
-CREATE TABLE review_images_table (
+DROP TABLE IF EXISTS review_images CASCADE;
+CREATE TABLE review_images (
 id serial PRIMARY KEY,
 image_url TEXT NOT NULL,
 alt_text TEXT,
