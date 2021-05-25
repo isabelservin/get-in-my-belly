@@ -31,3 +31,12 @@ build/
 
 ### VS Code ###
 .vscode/
+
+src/main/frontend/public/bundle.js
+src/main/frontend/node_modules/*
+yarn.lock
+.DS_store
+.bundle
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

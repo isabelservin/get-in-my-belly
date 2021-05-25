@@ -11,7 +11,7 @@ const App = props => {
         <div className="grid-container no-bullet">
           <div className="grid-x grid-margin-x text-center">
             <Switch>
-              <Route exact path="/restaurants" component={RestaurantList} />
+              <Route exact path="/:categoryName/restaurants" component={RestaurantList} />
             </Switch>
           </div>
         </div>
