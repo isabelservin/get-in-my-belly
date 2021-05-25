@@ -10,7 +10,6 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.validation.constraints.NotBlank;
@@ -38,7 +37,9 @@ public class Location {
   @Column(name = "phone_number")
   private String phoneNumber;
 
-  @NotBlank
+  @Column(name = "health_dept_rating")
+  private Integer healthDeptRating;
+
   @Column(name = "image_url")
   private String imageUrl;
 
