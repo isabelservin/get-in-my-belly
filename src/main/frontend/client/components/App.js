@@ -11,7 +11,7 @@ const App = props => {
         <div>
           <div>
             <Switch>
-              <Route exact path="/restaurants" component={RestaurantList} />
+              <Route exact path="/:categoryName/restaurants" component={RestaurantList} />
               <Route exact path="/restaurants/new" component={RestaurantForm} />
               <Route exact path="/review/new" component={ReviewForm} />
             </Switch>
