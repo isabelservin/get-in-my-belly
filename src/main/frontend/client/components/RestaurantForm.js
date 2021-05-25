@@ -88,7 +88,7 @@ const RestaurantForm = props => {
             <div className="row">
               <div className="medium-6 columns">
                 <label htmlFor="name">
-                  Your Name:
+                  Restaurant Name:
                   <input
                     id="name"
                     type="text"
