@@ -1,5 +1,6 @@
 package com.launchacademy.reviews.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.Date;
@@ -46,5 +47,6 @@ public class Review {
   private Location location;
 
   @OneToMany(mappedBy = "review")
+  @JsonIgnoreProperties("review")
   private List<Image> images = new ArrayList<>();
 }
