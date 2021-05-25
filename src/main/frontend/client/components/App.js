@@ -8,10 +8,12 @@ const App = props => {
   return (
       <BrowserRouter>
 
-        <div className="grid-container no-bullet">
-          <div className="grid-x grid-margin-x text-center">
+        <div>
+          <div>
             <Switch>
               <Route exact path="/:categoryName/restaurants" component={RestaurantList} />
+              <Route exact path="/restaurants/new" component={RestaurantForm} />
+              <Route exact path="/review/new" component={ReviewForm} />
             </Switch>
           </div>
         </div>
