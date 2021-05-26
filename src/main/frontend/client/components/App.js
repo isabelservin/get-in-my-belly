@@ -15,7 +15,7 @@ import CategoryList from "./CategoryList"
 const App = props => {
   return (
       <BrowserRouter>
-
+        <NavBar />
         <div>
           <div>
             <Switch>

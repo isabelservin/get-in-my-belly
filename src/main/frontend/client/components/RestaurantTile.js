@@ -1,23 +1,23 @@
 import React from "react"
+import { Link } from "react-router-dom"
 
 const RestaurantTile = props => {
-
-  let phoneNumberFormatted = ""
-  if (props.location.phoneNumber != undefined && props.location.phoneNumber.length == 10) {
-    phoneNumberFormatted = props.location.phoneNumber.replace(/(\d{3})(\d{3})(\d{4})/, "($1) $2-$3")
-  }
-
   return (
-    <>
-      <h2>{props.name}</h2>
-      <span>{props.category.type}</span>
-      <ul className="address-phone-ul">
-      <li>{props.location.address}</li>
-      <li>{phoneNumberFormatted}</li>
-      </ul>
-      <img src={props.imgUrl} />
-    </>
+    <div className="cell">
+      <div className="card">
+        <div className="card-divider">
+          <h2><Link to={`/${props.type}/restaurant/${props.id}`}>{props.name}</Link></h2>
+        </div>
+        <Link to={`${props.type}/restaurant/${props.id}`}>
+          <img className="images thumbnail" src={props.imgUrl}></img>
+        </Link>
+        <div className="card-section">
+          <p>
+            <strong>Review:</strong> {props.review} <br/>
+          </p>
+        </div>
+      </div>
+    </div>
   )
 }
-
 export default RestaurantTile

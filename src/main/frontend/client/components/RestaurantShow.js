@@ -12,8 +12,8 @@ const RestaurantShow = props => {
     try {
       const restaurantId = props.match.params.id
       const restaurantCategory = props.match.params.categoryName
-
-      const response = await fetch(`/api/v1/restaurants/${restaurantCategory}/${restaurantId}`)
+      console.log(props.match.params.categoryName)
+      const response = await fetch(`/api/v1/${restaurantCategory}/restaurant/${restaurantId}`)
       if (!response.ok) {
         const errorMessage = `${response.status} (${response.statusText})`
         const error = new Error(errorMessage)
