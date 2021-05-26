@@ -1,0 +1,25 @@
+.error {
+  color: rgb(219, 47, 47);
+}
+
+.wrap-width {
+  width: 80%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.restaurant-tile-show {
+  border: 1px solid #000;
+  padding: 2em;
+}
+
+.restaurant-tile-show h2 {
+margin: 0;
+}
+
+.address-phone-ul {
+list-style-type: none;
+padding: 0;
+margin-bottom: 1.5em;
+margin-left: 0;
+}
