@@ -108,8 +108,8 @@ const RestaurantForm = props => {
                     id="restaurantCategory"
                     name="restaurantCategory"
                     value={newRestaurant.restaurantType}
-                    onChange={handleInput}
-                  >
+                    onChange={handleInput}>
+
                     <option value="">Please Select A Category</option>
                     <option value="Vietnamese">Vietnamese</option>
                     <option value="Pacific Island">Pacific Island</option>
