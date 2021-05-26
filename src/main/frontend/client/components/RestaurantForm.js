@@ -98,6 +98,7 @@ const RestaurantForm = props => {
                   />
                 </label>
               </div>
+            </div>
 
             <div className="row">
               <div className="medium-6 columns">
@@ -116,6 +117,7 @@ const RestaurantForm = props => {
                   </select>
                 </label>
               </div>
+            </div>
 
             <div className="row">
               <div className="medium-6 columns">
@@ -130,6 +132,7 @@ const RestaurantForm = props => {
                   />
                 </label>
               </div>
+            </div>
 
             <input className="button round" type="submit" value="Submit" />
           </div>
