@@ -119,8 +119,8 @@ const ReviewForm = props => {
                   value={newReview.location}
                 >
                   <option value="">Please Select</option>
-                  <option value="Seattle">Own</option>
-                  <option value="Snohomish">Rent</option>
+                  <option value="Seattle">Seattle</option>
+                  <option value="Snohomish">Snohomish</option>
                 </select>
               </label>
             </div>

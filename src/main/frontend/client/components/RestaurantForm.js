@@ -7,15 +7,16 @@ import Error from "./Error"
 const RestaurantForm = props => {
   const [newRestaurant, setNewRestaurant] = useState({
     name: "",
-    restaurantType: "",
+    restaurantCategory: "",
     imageUrl: ""
   })
   const [errors, setErrors] = useState([])
   const [redirect, setRedirect] = useState(false)
 
   const addNewRestaurant = async () => {
+    console.log(newRestaurant)
     try {
-      const response = await fetch("/api/v1/restaurant", {
+      const response = await fetch("/api/v1/restaurants", {
         method: "POST",
         headers: new Headers({
           "Content-Type": "application/json"
@@ -42,7 +43,13 @@ const RestaurantForm = props => {
     }
   }
 
-  const handleInput = event => {
+  if (redirect) {
+  console.log(restaurantCategory)
+  console.log(newRestaurant.restaurantCategory)
+    return <Redirect to = {`${restaurantCategory}/restaurants`} />
+  }
+
+  const handleChange = event => {
     setNewRestaurant({
       ...newRestaurant,
       [event.currentTarget.name]: event.currentTarget.value
@@ -71,74 +78,66 @@ const RestaurantForm = props => {
     }
   }
 
-  if (redirect) {
-    return <Redirect to="/restaurant" />
-  }
 
   return (
-    <div>
-      <h2>Add a Restaurant:</h2>
-      <form onSubmit={handleSubmit} className="restaurant_app">
-        <div className="grid-container">
-          <div>
-            <div>
-              <Error errors={errors} />
-            </div>
-
-            <div className="row">
-              <div className="medium-6 columns">
-                <label htmlFor="name">
-                  Restaurant Name:
-                  <input
-                    id="name"
-                    type="text"
-                    name="name"
-                    onChange={handleInput}
-                    value={newRestaurant.name}
-                  />
-                </label>
-              </div>
-            </div>
-
-            <div className="row">
-              <div className="medium-6 columns">
-                <label htmlFor="restaurantCategory">
-                  Restaurant Category:
-                  <select
-                    id="restaurantCategory"
-                    name="restaurantCategory"
-                    value={newRestaurant.restaurantType}
-                    onChange={handleInput}>
-
-                    <option value="">Please Select A Category</option>
-                    <option value="Vietnamese">Vietnamese</option>
-                    <option value="Pacific Island">Pacific Island</option>
-                    <option value="Mexican">Mexican</option>
-                  </select>
-                </label>
-              </div>
-            </div>
-
-            <div className="row">
-              <div className="medium-6 columns">
-                <label htmlFor="imageUrl">
-                  Add picture of noteworthy meal:
-                  <input
-                    id="imageUrl"
-                    type="text"
-                    name="imageUrl"
-                    onChange={handleInput}
-                    value={newRestaurant.imageUrl}
-                  />
-                </label>
-              </div>
-            </div>
-
-            <input className="button round" type="submit" value="Submit" />
+    <form onSubmit={handleSubmit} className="restaurant_app">
+      <div className="grid-container">
+        <div className="grid-x grid-padding-x">
+          <div className="cell">
+            <h2>Add New Restaurant:</h2>
+            <Error errors={errors} />
           </div>
+
+          <div className="row">
+            <div className="medium-6 columns">
+              <label htmlFor="name">
+                Restaurant Name:
+                <input id="name"
+                type="text"
+                name="name"
+                onChange={handleChange}
+                value={newRestaurant.name} />
+              </label>
+            </div>
+
+            <div className="medium-6 columns">
+              <label htmlFor="restaurantCategory">
+                Restaurant Category:
+                <select
+                  id="restaurantCategory"
+                  name="restaurantCategory"
+                  onChange={handleChange}
+                  value={newRestaurant.restaurantCategory}
+                  >
+                  <option value="">Please Select Category</option>
+                  <option value="Vietnamese">Vietnamese</option>
+                  <option value="Pacific Island">Pacific Island</option>
+                  <option value="Mexican">Mexican</option>
+                  </select>
+              </label>
+            </div>
+
+          <div className="row">
+            <div className="medium-6 columns">
+              <label htmlFor="imageUrl">
+                Add food image URL:
+                <input
+                  id="imageUrl"
+                  type="text"
+                  name="imageUrl"
+                  onChange={handleChange}
+                  value={newRestaurant.imageUrl}
+                />
+              </label>
+            </div>
+          </div>
+
+          <input className="button round" type="submit" value="Submit" />
         </div>
-      </form>
-    </div>
+        </div>
+      </div>
+    </form>
+
   )
 }
 export default RestaurantForm
