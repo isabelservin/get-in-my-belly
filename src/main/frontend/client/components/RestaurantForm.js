@@ -98,6 +98,7 @@ const RestaurantForm = props => {
                   />
                 </label>
               </div>
+            </div>
 
             <div className="row">
               <div className="medium-6 columns">
@@ -107,8 +108,8 @@ const RestaurantForm = props => {
                     id="restaurantCategory"
                     name="restaurantCategory"
                     value={newRestaurant.restaurantType}
-                    onChange={handleInput}
-                  >
+                    onChange={handleInput}>
+
                     <option value="">Please Select A Category</option>
                     <option value="Vietnamese">Vietnamese</option>
                     <option value="Pacific Island">Pacific Island</option>
@@ -116,6 +117,7 @@ const RestaurantForm = props => {
                   </select>
                 </label>
               </div>
+            </div>
 
             <div className="row">
               <div className="medium-6 columns">
@@ -130,6 +132,7 @@ const RestaurantForm = props => {
                   />
                 </label>
               </div>
+            </div>
 
             <input className="button round" type="submit" value="Submit" />
           </div>
