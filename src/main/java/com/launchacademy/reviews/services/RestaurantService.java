@@ -39,4 +39,6 @@ public class RestaurantService {
     restaurant.setCategory(category);
    return restaurantRepository.save(restaurant);
   }
+
+
 }

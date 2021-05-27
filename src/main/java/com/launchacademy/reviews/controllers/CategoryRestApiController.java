@@ -2,6 +2,7 @@ package com.launchacademy.reviews.controllers;
 
 import com.launchacademy.reviews.models.Category;
 import com.launchacademy.reviews.models.Restaurant;
+import com.launchacademy.reviews.repositories.RestaurantRepository;
 import com.launchacademy.reviews.services.CategoryService;
 import java.util.List;
 import java.util.Optional;
@@ -21,6 +22,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api/v1")
 public class CategoryRestApiController {
   private CategoryService categoryService;
+  @Autowired private RestaurantRepository restaurantRepository;
 
   @Autowired
   public CategoryRestApiController(CategoryService categoryService) {
@@ -44,7 +46,7 @@ public class CategoryRestApiController {
 
   @GetMapping("/{categoryName}/restaurant/{id}")
   public Restaurant getRestaurantByCategoryNameAndId (@PathVariable String categoryName, @PathVariable Integer id) {
-    return categoryService.getByCategoryAndId(categoryName, id);
+    return restaurantRepository.findById(id).orElseThrow(() -> new CategoryNotFound());
   }
 
   @NoArgsConstructor
