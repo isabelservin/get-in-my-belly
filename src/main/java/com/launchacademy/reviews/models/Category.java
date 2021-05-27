@@ -3,6 +3,7 @@ package com.launchacademy.reviews.models;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import java.util.ArrayList;
 import java.util.List;
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -36,7 +37,12 @@ public class Category {
   @Column(name = "description")
   private String description;
 
-  @OneToMany(mappedBy = "category")
+  @OneToMany(mappedBy = "category", cascade = CascadeType.ALL)
   @JsonIgnoreProperties("category")
   private List<Restaurant> restaurants = new ArrayList<>();
+
+//  public Category() {}
+  public Category(String type) {
+    this.type = type;
+  }
 }

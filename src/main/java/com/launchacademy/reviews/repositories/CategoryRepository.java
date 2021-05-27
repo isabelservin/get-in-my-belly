@@ -7,4 +7,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface CategoryRepository extends CrudRepository<Category, Integer> {
   public Category findAllByType(String type);
+  Category findByType(String type);
 }
