@@ -1,12 +1,14 @@
 import React, { useState, useEffect} from "react";
 import RestaurantTile from "./RestaurantTile.js"
 import ReviewTile from "./ReviewTile.js"
+import {Redirect} from "react-router-dom";
 
 const RestaurantShow = props => {
   const [restaurant, setRestaurant] = useState([]);
   const [location, setLocation] = useState([]);
   const [category, setCategory] = useState([])
   const [restaurantReviews, setRestaurantReviews] = useState ([])
+  const [notFound, setNotFound] = useState(null)
 
   const getRestaurant = async () => {
     try {
@@ -17,6 +19,7 @@ const RestaurantShow = props => {
       if (!response.ok) {
         const errorMessage = `${response.status} (${response.statusText})`
         const error = new Error(errorMessage)
+        setNotFound("not found")
         throw error
       }
       const responseBody = await response.json()
@@ -32,7 +35,11 @@ const RestaurantShow = props => {
   useEffect(() => {
     getRestaurant()
   }, [])
-  
+
+  if (notFound) {
+    return <Redirect to={"/404"} />
+  }
+
   const reviewList = restaurantReviews.map(review => {
     return (
       <ReviewTile

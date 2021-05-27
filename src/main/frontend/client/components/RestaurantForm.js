@@ -119,7 +119,6 @@ const RestaurantForm = props => {
               </label>
             </div>
 
-
           <div className="row">
             <div className="medium-6 columns">
               <label htmlFor="imageUrl">
