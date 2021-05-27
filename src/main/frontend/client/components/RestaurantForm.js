@@ -51,7 +51,6 @@ const RestaurantForm = props => {
 
 
   if (redirect) {
-    console.log(newRestaurant.category)
     return <Redirect to = {`/${newRestaurant.category}/restaurants`} />
   }
 

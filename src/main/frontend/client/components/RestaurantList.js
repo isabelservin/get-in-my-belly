@@ -32,6 +32,7 @@ const RestaurantList = props => {
         name={restaurant.name}
         imgUrl={restaurant.imageUrl}
         type={props.match.params.categoryName}
+        restaurant={restaurant}
       />
     )
   })
