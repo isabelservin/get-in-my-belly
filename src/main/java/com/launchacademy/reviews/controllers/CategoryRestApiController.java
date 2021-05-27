@@ -5,7 +5,6 @@ import com.launchacademy.reviews.models.Restaurant;
 import com.launchacademy.reviews.repositories.RestaurantRepository;
 import com.launchacademy.reviews.services.CategoryService;
 import java.util.List;
-import java.util.Optional;
 import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -50,7 +49,7 @@ public class CategoryRestApiController {
   }
 
   @NoArgsConstructor
-  private class CategoryNotFound extends RuntimeException {};
+  class CategoryNotFound extends RuntimeException {};
 
   @ControllerAdvice
   private class PetTypeNotFoundAdvice {

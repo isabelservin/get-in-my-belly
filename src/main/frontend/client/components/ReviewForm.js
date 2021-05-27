@@ -1,25 +1,56 @@
-import React, { useState } from "react"
+import React, {useEffect, useState} from "react"
 import _ from "lodash"
 
 import Error from "./Error"
+import {Redirect} from "react-router-dom";
 
 const ReviewForm = props => {
+  const restaurantId = props.match.params.restaurantId
+  const [redirect, setRedirect] = useState(null)
+
   const [newReview, setNewReview] = useState({
     name: "",
     restaurantRating: "",
-    review: ""
-
+    review: "",
+    address: "",
+    phoneNumber: "",
+    restaurantId: restaurantId
   })
   const [errors, setErrors] = useState([])
 
-  const addNewReview = async () => {
+  const [currentRestaurant, setCurrentRestaurant] = useState({
+    name: "",
+    address: "",
+    phoneNumber: ""
+  })
+
+  const fetchCurrentAddress = async () => {
+    try {
+      const response = await fetch(`/api/v1/restaurants/${restaurantId}`)
+      if (!response.ok) {
+        const errorMessage = `${response.status} (${response.statusText})`
+        const error = new Error(errorMessage)
+        throw error
+      }
+      const body = await response.json()
+      setCurrentRestaurant(body)
+    } catch (err) {
+      console.log(`Error in fetch: ${err.message}`)
+    }
+  }
+
+  useEffect(() => {
+    fetchCurrentAddress()
+  }, [])
+
+  const addNewReview = async (newReview) => {
     let formPayload = newReview
     formPayload.restaurantId = props.id
     try {
-      const response = await fetch("/api/v1/review", {
+      const response = await fetch("/api/v1/reviews", {
         method: "POST",
         headers: new Headers({
-          "Content-Type": "review/json"
+          "Content-Type": "application/json"
         }),
         body: JSON.stringify(formPayload)
       })
@@ -29,8 +60,8 @@ const ReviewForm = props => {
         throw error
       } else {
         const body = await response.json()
-        if (body.newReview) {
-          props.handleWhatToShow()
+        if (body) {
+          setRedirect(true)
         }
       }
     } catch (error) {
@@ -59,9 +90,18 @@ const ReviewForm = props => {
 
   const handleSubmit = event => {
     event.preventDefault()
+    newReview.name = currentRestaurant.name
+    newReview.address = currentRestaurant.address
+    newReview.phoneNumber = currentRestaurant.phoneNumber
+    // newReview.restaurantId = restaurantId
+    const restaurantObj = { ...newReview, restaurant: { id: restaurantId }}
     if (isFormComplete()) {
-      addNewReview(newRestaurant)
+      addNewReview(restaurantObj)
     }
+  }
+
+  if (redirect) {
+    return <Redirect to = "/categories" />
   }
 
   return (
@@ -77,7 +117,25 @@ const ReviewForm = props => {
             <div className="medium-6 columns">
               <label htmlFor="name">
                 Restaurant name
-                <input id="name" type="text" name="name" onChange={handleChange} value={newReview.name} />
+                <input id="name" type="text" name="name" onChange={handleChange} value={currentRestaurant.name} />
+              </label>
+            </div>
+          </div>
+
+          <div className="row">
+            <div className="medium-6 columns">
+              <label htmlFor="address">
+                Restaurant address
+                <input id="address" type="text" name="address" onChange={handleChange} value={currentRestaurant.address} />
+              </label>
+            </div>
+          </div>
+
+          <div className="row">
+            <div className="medium-6 columns">
+              <label htmlFor="phoneNumber">
+                Restaurant phone number
+                <input id="phoneNumber" type="text" name="phoneNumber" onChange={handleChange} value={currentRestaurant.phoneNumber} />
               </label>
             </div>
           </div>

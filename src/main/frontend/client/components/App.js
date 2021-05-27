@@ -23,6 +23,7 @@ const App = props => {
               </Route>
               <Route exact path="/:categoryName/restaurants" component={RestaurantList} />
               <Route exact path="/restaurant/new" component={RestaurantForm} />
+              <Route exact path="/:restaurantId/review/new" component={ReviewForm} />
               <Route exact path="/review/new" component={ReviewForm} />
               <Route exact path="/:categoryName/restaurant/:id" component={RestaurantShow} />
               <Route exact path="/categories" component={CategoryList} />
