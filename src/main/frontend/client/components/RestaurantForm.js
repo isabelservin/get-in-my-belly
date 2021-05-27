@@ -8,7 +8,11 @@ const RestaurantForm = props => {
   const [newRestaurant, setNewRestaurant] = useState({
     name: "",
     imageUrl: "",
-    category: ""
+    category: "",
+    description: "",
+    phoneNumber: "",
+    address: "",
+    healthDeptRating: ""
   })
 
   const [errors, setErrors] = useState([])
@@ -63,7 +67,10 @@ const RestaurantForm = props => {
     const requiredFields = [
       "name",
       "category",
-      "imageUrl"
+      "imageUrl",
+      "description",
+      "phoneNumber",
+      "address"
     ]
     requiredFields.forEach(field => {
       if (newRestaurant[field].trim() === "") {
@@ -101,6 +108,7 @@ const RestaurantForm = props => {
                 value={newRestaurant.name} />
               </label>
             </div>
+          </div>
 
             <div className="medium-6 columns">
               <label htmlFor="category">
@@ -134,8 +142,67 @@ const RestaurantForm = props => {
             </div>
           </div>
 
+          <div className="row">
+            <div className="medium-6 columns">
+              <label htmlFor="phoneNumber">
+                Restaurant Phone number:
+                <input id="phoneNumber"
+                type="text"
+                name="phoneNumber"
+                onChange={handleChange}
+                value={newRestaurant.phoneNumber} />
+              </label>
+            </div>
+          </div>
+
+          <div className="row">
+            <div className="medium-6 columns">
+              <label htmlFor="address">
+                Restaurant Address:
+                <input id="address"
+                type="text"
+                name="address"
+                onChange={handleChange}
+                value={newRestaurant.address} />
+              </label>
+            </div>
+          </div>
+
+          <div className="row">
+            <div className="medium-6 columns">
+              <label htmlFor="description">
+                Add description:
+                <input
+                  id="description"
+                  type="text"
+                  name="description"
+                  onChange={handleChange}
+                  value={newRestaurant.description}
+                />
+              </label>
+            </div>
+          </div>
+
+            <div className="medium-6 columns">
+              <label htmlFor="healthDeptRating">
+                (Optional)Health Department Rating:
+                <select
+                  id="healthDeptRating"
+                  name="healthDeptRating"
+                  onChange={handleChange}
+                    value={newRestaurant.healthDeptRating}
+                  >
+                  <option value="">Please Select Rating:</option>
+                  <option value="0">N/A</option>
+                  <option value="1">Need to Improve</option>
+                  <option value="2">OK</option>
+                  <option value="3">Good</option>
+                  <option value="4">Excellent</option>
+                  </select>
+              </label>
+            </div>
+
           <input className="button round" type="submit" value="Submit" />
-        </div>
         </div>
       </div>
     </form>

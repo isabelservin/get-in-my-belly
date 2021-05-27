@@ -32,4 +32,8 @@ public class CategoryService {
     Category find = categoryRepository.findAllByType(categoryName);
     return find.getRestaurants().get(id-1);
   }
+
+  public <Optional>Category findByDescription(String description) {
+    return categoryRepository.findAllByType(description);
+  }
 }
