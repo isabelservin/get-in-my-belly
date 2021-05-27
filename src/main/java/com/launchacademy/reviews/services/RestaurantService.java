@@ -35,12 +35,7 @@ public class RestaurantService {
 
   public Restaurant save(Restaurant restaurant) {
     Category category = categoryRepository.findByType(restaurant.getCategory().getType());
-    // if (category == null)
-    Category categoryDescription = categoryRepository.findByType(restaurant.getCategory().getDescription());
     restaurant.setCategory(category);
-    restaurant.setCategory(categoryDescription);
    return restaurantRepository.save(restaurant);
   }
-
-
 }

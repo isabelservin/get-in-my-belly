@@ -9,7 +9,7 @@ const RestaurantTile = props => {
         <div className="card-divider">
           <h2><Link to={`/${props.type}/restaurant/${props.id}`}>{props.name}</Link></h2>
         </div>
-        <Link to={`${props.type}/restaurant/${props.id}`}>
+        <Link to={`/${props.type}/restaurant/${props.id}`}>
           <img className="images thumbnail" src={props.imgUrl} />
         </Link>
         <div className="card-section">
