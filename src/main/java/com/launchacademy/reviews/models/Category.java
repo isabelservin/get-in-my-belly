@@ -34,6 +34,10 @@ public class Category {
   private String type;
 
   @NotBlank
+  @Column(name = "img")
+  private String img;
+
+  @NotBlank
   @Column(name = "description")
   private String description;
 

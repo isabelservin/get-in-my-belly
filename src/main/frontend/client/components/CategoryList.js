@@ -30,6 +30,7 @@ const CategoryList = (props) => {
                key={category.id}
                id={category.id}
                type={category.type}
+               img={category.img}
                desc={category.description}
             />
         )
@@ -38,9 +39,14 @@ const CategoryList = (props) => {
     return(
         <>
         <div className="content">
-          <div className="category">
-            {listOfCategories}
-          </div>
+           <div className="banner">
+               <div className="site-name">
+                <h1 id="web-name"> Get In My Belly! </h1>
+                </div>
+           </div>
+            <div className="category">
+                {listOfCategories}
+            </div>
         </div>
         </>
     )
