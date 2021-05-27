@@ -5,7 +5,6 @@ import {Redirect} from "react-router-dom";
 
 const RestaurantShow = props => {
   const [restaurant, setRestaurant] = useState([]);
-//  const [location, setLocation] = useState([]);
   const [category, setCategory] = useState([])
   const [restaurantReviews, setRestaurantReviews] = useState ([])
   const [notFound, setNotFound] = useState(null)
@@ -23,7 +22,6 @@ const RestaurantShow = props => {
       }
       const responseBody = await response.json()
       setRestaurant(responseBody)
-//      setLocation(responseBody.locations[0])
       setCategory(responseBody.category)
       setRestaurantReviews(responseBody.reviews)
     } catch (err) {
@@ -51,7 +49,6 @@ const RestaurantShow = props => {
     )
   })
 
-console.log(restaurant)
 
   return (
   <div className="wrap-width">
@@ -71,6 +68,7 @@ console.log(restaurant)
           name={restaurant.name}
           imgUrl={restaurant.imageUrl}
           category={category}
+          restaurant={restaurant}
           />
         </div>
       </div>
