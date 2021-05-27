@@ -48,7 +48,7 @@ const RestaurantForm = props => {
 
   if (redirect) {
     console.log(newRestaurant.category)
-    return <Redirect push to = {`/${newRestaurant.category}/restaurants`} />
+    return <Redirect to = {`/${newRestaurant.category}/restaurants`} />
   }
 
   const handleChange = event => {
