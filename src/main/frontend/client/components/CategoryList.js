@@ -37,18 +37,11 @@ const CategoryList = (props) => {
     })
 
     return(
-        <>
+      <>
         <div className="content">
-           <div className="banner">
-               <div className="site-name">
-                <h1 id="web-name"> Get In My Belly! </h1>
-                </div>
-           </div>
-            <div className="category">
                 {listOfCategories}
-            </div>
         </div>
-        </>
+      </>
     )
 }
 

@@ -1,5 +1,5 @@
 import React, { useState, useEffect}  from "react";
-import RestaurantTile from "./RestaurantTile.js"
+import RestaurantTileMin from "./RestaurantTileMin.js"
 
 const RestaurantList = props => {
   const [restaurantType, setRestaurantType] = useState([])
@@ -26,7 +26,7 @@ const RestaurantList = props => {
 
   const restaurantList = restaurantType.map(restaurant => {
     return (
-      <RestaurantTile
+      <RestaurantTileMin
         key={restaurant.id}
         id={restaurant.id}
         name={restaurant.name}
