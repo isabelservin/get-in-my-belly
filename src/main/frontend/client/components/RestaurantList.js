@@ -30,7 +30,7 @@ const RestaurantList = props => {
         key={restaurant.id}
         id={restaurant.id}
         name={restaurant.name}
-        imgUrl={restaurant.imgUrl}
+        imgUrl={restaurant.imageUrl}
         type={props.match.params.categoryName}
       />
     )

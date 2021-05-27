@@ -24,6 +24,17 @@ margin-bottom: 1.5em;
 margin-left: 0;
 }
 
-.notfound {
-  margin-left: 20%;
+.notfound h2 {
+  text-align: center;
+  color: blue;
+}
+
+.notfound div {
+  margin-left: 22%;
+}
+
+.images {
+  height: 60%;
+  width: 60%;
+  border: black;
 }
