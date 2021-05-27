@@ -3,7 +3,6 @@ import { Link } from "react-router-dom"
 import ReviewTile from "./ReviewTile";
 
 const RestaurantTile = props => {
-  console.log(props)
   const showListOfReview = props.restaurant.reviews.map( review => {
     return (
         <ReviewTile
@@ -15,7 +14,6 @@ const RestaurantTile = props => {
         />
     )
   })
-
 
   return (
     <div className="cell">
@@ -38,4 +36,5 @@ const RestaurantTile = props => {
     </div>
   )
 }
+
 export default RestaurantTile
