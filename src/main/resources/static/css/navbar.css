@@ -1,5 +1,4 @@
 .nav  {
-  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -8,8 +7,8 @@
   justify-content: space-between;
   align-items: center;
   z-index: 1;
-  background-color: ghostwhite;
-  opacity: 0.6;
+  background-color: rgba(0,0,0,.8);
+  background-opacity: 0.6;
   font-variant: small-caps;
   text-transform: lowercase;
 }

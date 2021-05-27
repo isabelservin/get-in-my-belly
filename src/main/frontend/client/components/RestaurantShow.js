@@ -5,7 +5,7 @@ import {Redirect} from "react-router-dom";
 
 const RestaurantShow = props => {
   const [restaurant, setRestaurant] = useState([]);
-  const [location, setLocation] = useState([]);
+//  const [location, setLocation] = useState([]);
   const [category, setCategory] = useState([])
   const [restaurantReviews, setRestaurantReviews] = useState ([])
   const [notFound, setNotFound] = useState(null)
@@ -14,7 +14,6 @@ const RestaurantShow = props => {
     try {
       const restaurantId = props.match.params.id
       const restaurantCategory = props.match.params.categoryName
-      console.log(props.match.params.categoryName)
       const response = await fetch(`/api/v1/${restaurantCategory}/restaurant/${restaurantId}`)
       if (!response.ok) {
         const errorMessage = `${response.status} (${response.statusText})`
@@ -24,9 +23,9 @@ const RestaurantShow = props => {
       }
       const responseBody = await response.json()
       setRestaurant(responseBody)
-      setLocation(responseBody.locations[0])
+//      setLocation(responseBody.locations[0])
       setCategory(responseBody.category)
-      setRestaurantReviews(responseBody.locations[0].reviews)
+      setRestaurantReviews(responseBody.reviews)
     } catch (err) {
       console.log(`Error fetching restaurant: ${err.message}`)
     }
@@ -52,15 +51,21 @@ const RestaurantShow = props => {
     )
   })
 
+console.log(restaurant)
+
   return (
   <div className="wrap-width">
     <div className="grid-x grid-margin-x">
-      <div className="cell small-8">{reviewList}</div>
-
+      <div className="cell small-8">
+        {reviewList}
+      </div>
       <div className="cell small-4">
         <div className = "restaurant-tile-show">
           <RestaurantTile
-          location={location}
+          address={restaurant.address}
+          phoneNumber={restaurant.phoneNumber}
+          healthDeptRating={restaurant.healthDeptRating}
+          description={restaurant.description}
           key={restaurant.id}
           id={restaurant.id}
           name={restaurant.name}
