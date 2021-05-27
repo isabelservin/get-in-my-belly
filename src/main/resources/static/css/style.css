@@ -38,3 +38,9 @@ margin-left: 0;
   width: 60%;
   border: black;
 }
+
+.review-button {
+  padding: 20px;
+  border-radius: 7px;
+  background-color: #F43939;
+}

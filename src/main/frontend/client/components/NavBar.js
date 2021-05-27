@@ -4,9 +4,9 @@ import { Link } from "react-router-dom"
 const NavBar = () => {
 
   return (
-    <div className="title-bar">
-      <div className="top-bar-left">
-        <ul className="menu">
+    <div className="nav">
+      <div>
+        <ul className="menu" id="navbar">
           <li>
             <Link to="/categories">Home</Link>
           </li>
@@ -14,7 +14,7 @@ const NavBar = () => {
             <Link to="/restaurant/new">Add a Restaurant</Link>
           </li>
           <li>
-            <Link to="/review/new">Add a Review</Link>
+            <Link to="/review/new">Write A Review</Link>
           </li>
         </ul>
       </div>

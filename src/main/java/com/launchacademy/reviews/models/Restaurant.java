@@ -38,11 +38,25 @@ public class Restaurant {
   @Column(name = "image_url")
   private String imageUrl;
 
+  @NotBlank
+  @Column(name="address")
+  private String address;
+
+  @NotBlank
+  @Column(name="phone_number")
+  private String phoneNumber;
+
+  @Column(name="description")
+  private String description;
+
+  @Column(name="health_dept_rating")
+  private Integer healthDeptRating;
+
   @ManyToOne
   @JoinColumn(name = "restaurant_category_id")
   private Category category;
 
   @OneToMany(mappedBy = "restaurant", cascade = CascadeType.ALL)
   @JsonIgnoreProperties("restaurant")
-  private List<Location> locations = new ArrayList<>();
+  private List<Review> reviews = new ArrayList<>();
 }

@@ -44,8 +44,8 @@ public class Review {
   private Timestamp datePosted;
 
   @ManyToOne
-  @JoinColumn(name = "location_id")
-  private Location location;
+  @JoinColumn(name = "restaurant_id")
+  private Restaurant restaurant;
 
   @OneToMany(mappedBy = "review", cascade = CascadeType.ALL)
   @JsonIgnoreProperties("review")
