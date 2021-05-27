@@ -15,6 +15,7 @@ const RestaurantTile = props => {
         <div className="card-section">
           <p>
             <strong>Review:</strong> {props.review} <br/>
+            <button className="review-button"><strong>Write a Review</strong></button>
           </p>
         </div>
       </div>
