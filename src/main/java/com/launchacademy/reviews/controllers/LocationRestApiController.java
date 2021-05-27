@@ -1,6 +1,5 @@
 package com.launchacademy.reviews.controllers;
 
-import com.launchacademy.reviews.models.Location;
 import com.launchacademy.reviews.services.LocationService;
 import java.util.List;
 import javax.validation.Valid;
@@ -24,13 +23,13 @@ public class LocationRestApiController {
     this.locationService = locationService;
   }
 
-  @PostMapping
-  public ResponseEntity create(@Valid @RequestBody Location location, BindingResult bindingResult) {
-    if(bindingResult.hasErrors()) {
-      return new ResponseEntity<List>(bindingResult.getAllErrors(), HttpStatus.NOT_ACCEPTABLE);
-    }
-    else {
-      return new ResponseEntity<Location>(locationService.save(location), HttpStatus.CREATED);
-    }
-  }
+//  @PostMapping
+//  public ResponseEntity create(@Valid @RequestBody Location location, BindingResult bindingResult) {
+//    if(bindingResult.hasErrors()) {
+//      return new ResponseEntity<List>(bindingResult.getAllErrors(), HttpStatus.NOT_ACCEPTABLE);
+//    }
+//    else {
+//      return new ResponseEntity<Location>(locationService.save(location), HttpStatus.CREATED);
+//    }
+//  }
 }

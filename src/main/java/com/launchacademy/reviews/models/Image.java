@@ -34,8 +34,8 @@ public class Image {
   private String altText;
 
   @ManyToOne
-  @JoinColumn(name = "location_id")
-  private Location location;
+  @JoinColumn(name = "restaurant_id")
+  private Restaurant restaurant;
 
   @ManyToOne
   @JoinColumn(name = "review_id")
