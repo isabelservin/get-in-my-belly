@@ -5,7 +5,7 @@
 .wrap-width {
   width: 80%;
   max-width: 1200px;
-  margin: auto;
+  margin-top: 100px;
 }
 
 .restaurant-tile-show {
@@ -44,4 +44,8 @@ font-size: .75em;
   padding: 20px;
   border-radius: 7px;
   background-color: #F43939;
+}
+
+form {
+  margin-top: 80px;
 }

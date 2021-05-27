@@ -7,8 +7,8 @@ const ReviewForm = props => {
   const [newReview, setNewReview] = useState({
     name: "",
     restaurantRating: "",
-    review: "",
-    location: ""
+    review: ""
+
   })
   const [errors, setErrors] = useState([])
 
@@ -40,7 +40,7 @@ const ReviewForm = props => {
 
   const isFormComplete = () => {
     let submitErrors = {}
-    const requiredFields = ["name", "restaurantRating", "review", "location"]
+    const requiredFields = ["name", "restaurantRating", "review"]
     requiredFields.forEach(field => {
       if (newReview[field].trim() === "") {
         submitErrors = {...submitErrors, [field]: "is required." }
@@ -80,6 +80,7 @@ const ReviewForm = props => {
                 <input id="name" type="text" name="name" onChange={handleChange} value={newReview.name} />
               </label>
             </div>
+          </div>
 
             <div className="medium-6 columns">
               <label htmlFor="restaurantRating">
@@ -93,7 +94,6 @@ const ReviewForm = props => {
                 />
               </label>
             </div>
-          </div>
 
           <div className="row">
             <div className="medium-6 columns">
@@ -106,22 +106,6 @@ const ReviewForm = props => {
                   onChange={handleChange}
                   value={newReview.review}
                 />
-              </label>
-            </div>
-
-            <div className="medium-6 columns">
-              <label htmlFor="location">
-                Which location?
-                <select
-                  id="location"
-                  name="location"
-                  onChange={handleChange}
-                  value={newReview.location}
-                >
-                  <option value="">Please Select</option>
-                  <option value="Seattle">Seattle</option>
-                  <option value="Snohomish">Snohomish</option>
-                </select>
               </label>
             </div>
           </div>
