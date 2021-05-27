@@ -1,0 +1,34 @@
+.nav  {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+  background-color: ghostwhite;
+  opacity: 0.6;
+  font-variant: small-caps;
+  text-transform: lowercase;
+}
+
+.nav #navbar {
+  font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;
+  text-transform: lowercase;
+  font-size: 13pt;
+  color: #62C2F4;
+  }
+}
+
+li {
+   float: left;
+}
+
+.nav a:hover{
+   display: block;
+   color:#3CAB06;
+   font-weight: bold;
+
+}
