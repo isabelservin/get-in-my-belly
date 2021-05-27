@@ -3,6 +3,7 @@ package com.launchacademy.reviews.models;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import java.util.ArrayList;
 import java.util.List;
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -41,7 +42,7 @@ public class Restaurant {
   @JoinColumn(name = "restaurant_category_id")
   private Category category;
 
-  @OneToMany(mappedBy = "restaurant")
+  @OneToMany(mappedBy = "restaurant", cascade = CascadeType.ALL)
   @JsonIgnoreProperties("restaurant")
   private List<Location> locations = new ArrayList<>();
 }

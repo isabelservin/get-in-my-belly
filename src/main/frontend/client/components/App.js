@@ -19,6 +19,9 @@ const App = props => {
         <div>
           <div>
             <Switch>
+              <Route exact path="/">
+                <Redirect to="/categories" />
+              </Route>
               <Route exact path="/:categoryName/restaurants" component={RestaurantList} />
               <Route exact path="/restaurant/new" component={RestaurantForm} />
               <Route exact path="/review/new" component={ReviewForm} />

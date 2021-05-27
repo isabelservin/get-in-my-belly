@@ -7,9 +7,10 @@ import Error from "./Error"
 const RestaurantForm = props => {
   const [newRestaurant, setNewRestaurant] = useState({
     name: "",
-    restaurantCategory: "",
-    imageUrl: ""
+    imageUrl: "",
+    category: ""
   })
+
   const [errors, setErrors] = useState([])
   const [redirect, setRedirect] = useState(false)
 
@@ -36,6 +37,7 @@ const RestaurantForm = props => {
         const data = await response.json()
         if (data) {
           setRedirect(true)
+
         }
       }
     } catch (error) {
@@ -43,10 +45,10 @@ const RestaurantForm = props => {
     }
   }
 
+
   if (redirect) {
-  console.log(restaurantCategory)
-  console.log(newRestaurant.restaurantCategory)
-    return <Redirect to = {`${restaurantCategory}/restaurants`} />
+    console.log(newRestaurant.category)
+    return <Redirect push to = {`/${newRestaurant.category}/restaurants`} />
   }
 
   const handleChange = event => {
@@ -55,11 +57,12 @@ const RestaurantForm = props => {
       [event.currentTarget.name]: event.currentTarget.value
     })
   }
+
   const validateInput = () => {
     let submissionErrors = {}
     const requiredFields = [
       "name",
-      "restaurantCategory",
+      "category",
       "imageUrl"
     ]
     requiredFields.forEach(field => {
@@ -77,7 +80,6 @@ const RestaurantForm = props => {
       addNewRestaurant()
     }
   }
-
 
   return (
     <form onSubmit={handleSubmit} className="restaurant_app">
@@ -101,13 +103,13 @@ const RestaurantForm = props => {
             </div>
 
             <div className="medium-6 columns">
-              <label htmlFor="restaurantCategory">
+              <label htmlFor="category">
                 Restaurant Category:
                 <select
-                  id="restaurantCategory"
-                  name="restaurantCategory"
+                  id="category"
+                  name="category"
                   onChange={handleChange}
-                  value={newRestaurant.restaurantCategory}
+                    value={newRestaurant.category}
                   >
                   <option value="">Please Select Category</option>
                   <option value="Vietnamese">Vietnamese</option>
@@ -116,6 +118,7 @@ const RestaurantForm = props => {
                   </select>
               </label>
             </div>
+
 
           <div className="row">
             <div className="medium-6 columns">
