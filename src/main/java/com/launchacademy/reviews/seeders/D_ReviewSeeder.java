@@ -57,7 +57,7 @@ public class D_ReviewSeeder implements CommandLineRunner {
 
       Review review5 = new Review();
       review5.setReview("I thought that when I got my heart broken that the wound felt really raw. But, this place has the freshest, most raw-est cuts of poke you can find beyond the islands. I couldn't believe I got so lucky. I needed a cure for my broken heart, and I am so glad I came across Ono Poke after a long journey through a terrible relationship. Stay single!");
-      review5.setRestaurant(restaurantRepository.findByName("Ono Authentic Hawaiian Poke").get());
+      review5.setRestaurant(restaurantRepository.findByName("Ono Poke").get());
       review5.setRestaurantRating(4);
       review5.setDatePosted(timestamp);
       reviewRepository.save(review5);
