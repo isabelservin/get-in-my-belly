@@ -5,7 +5,13 @@ import Error from "./Error"
 import {Redirect} from "react-router-dom";
 
 const ReviewForm = props => {
-  const restaurantId = props.match.params.restaurantId
+  let restaurantId, restaurantType
+  if (props.retaurantId !== null) {
+    restaurantId = props.retaurantId
+  } else {
+    restaurantId = props.match.params.restaurantId
+  }
+
   const [redirect, setRedirect] = useState(null)
 
   const [newReview, setNewReview] = useState({
@@ -101,20 +107,24 @@ const ReviewForm = props => {
   }
 
   if (redirect) {
-    return <Redirect to="/categories"/>
+    window.location.reload(true);
+    console.log(currentRestaurant.category.type + restaurantId)
+    return <Redirect to={`/${currentRestaurant.category.type}/restaurant/${restaurantId}`}/>
   }
 
   return (
     <>
-    <div id="review-form" className="font-caps">
+
+    <div id="review-form" className="font-caps for-show-page">
         <div className="review-form-container">
         </div>
         <div className="review-form-right-side">
             <h2>Tell us about your experience...</h2>
             <Error errors={errors} />
 
+
             <form onSubmit={handleSubmit} >
-                <div className="user-box">
+                <div className="user-box hidden" >
                     <label htmlFor="name"> Restaurant Name
                      <input id="name"
                      type="text"
@@ -124,7 +134,7 @@ const ReviewForm = props => {
                     </label>
                 </div>
 
-                <div className="user-box">
+                <div className="user-box hidden">
                      <label htmlFor="address">
                         Restaurant Address
                         <input id="address"
@@ -134,7 +144,7 @@ const ReviewForm = props => {
                      </label>
                  </div>
 
-                <div className="user-box">
+                <div className="user-box hidden">
                      <label htmlFor="phoneNumber">
                         Restaurant phone number
                         <input id="phoneNumber"
