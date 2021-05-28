@@ -5,7 +5,13 @@ import Error from "./Error"
 import {Redirect} from "react-router-dom";
 
 const ReviewForm = props => {
-  const restaurantId = props.match.params.restaurantId
+  let restaurantId, restaurantType
+  if (props.retaurantId !== null) {
+    restaurantId = props.retaurantId
+  } else {
+    restaurantId = props.match.params.restaurantId
+  }
+
   const [redirect, setRedirect] = useState(null)
 
   const [newReview, setNewReview] = useState({
@@ -101,12 +107,14 @@ const ReviewForm = props => {
   }
 
   if (redirect) {
-    return <Redirect to="/categories"/>
+    window.location.reload(true);
+    console.log(currentRestaurant.category.type + restaurantId)
+    return <Redirect to={`/${currentRestaurant.category.type}/restaurant/${restaurantId}`}/>
   }
 
   return (
     <>
-    <div id="review-form">
+    <div id="review-form" className="for-show-page">
         <div className="review-form-container">
             <div >
             </div>
@@ -117,7 +125,7 @@ const ReviewForm = props => {
 
             <form onSubmit={handleSubmit} id="review-form-box" >
 
-                <div className="input-box w50">
+                <div className="input-box w50 hidden" >
                     <label htmlFor="name"> Restaurant Name
                      <input id="name"
                      type="text"
@@ -127,7 +135,7 @@ const ReviewForm = props => {
                     </label>
                 </div>
 
-                <div className="input-box w50">
+                <div className="input-box w50 hidden">
                      <label htmlFor="address">
                         Restaurant Address
                         <input id="address"
@@ -137,7 +145,7 @@ const ReviewForm = props => {
                      </label>
                  </div>
 
-                <div className="input-box w50">
+                <div className="input-box w50 hidden">
                      <label htmlFor="phoneNumber">
                         Restaurant phone number
                         <input id="phoneNumber"

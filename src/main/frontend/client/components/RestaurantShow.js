@@ -45,6 +45,8 @@ const RestaurantShow = props => {
         review={review.review}
         datePosted = {review.datePosted}
         rating = {review.restaurantRating}
+        restaurantId={props.match.params.id}
+        type={props.match.params.categoryName}
       />
     )
   })
@@ -56,6 +58,7 @@ const RestaurantShow = props => {
       <div className="cell small-8">
         {reviewList}
       </div>
+
       <div className="cell small-4">
         <div className = "restaurant-tile-show">
           <RestaurantTile
