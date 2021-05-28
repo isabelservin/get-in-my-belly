@@ -391,12 +391,89 @@ public class D_ReviewSeeder implements CommandLineRunner {
       espuelas2.setDatePosted(timestamp);
       reviewRepository.save(espuelas2);
 
-      Review espuelas3 = new Review();
-      espuelas3.setReview("Really good food. Their margaritas were ok a little sweet for me, but I don't drink anything with sugar in it normally just water and black coffee so maybe I'm a bad judge of overly sweet drinks. Would definitely comeback though their salsa is phenomenal!");
-      espuelas3.setRestaurant(restaurantRepository.findByName("Las Espuelas").get());
-      espuelas3.setRestaurantRating(4);
-      espuelas3.setDatePosted(timestamp);
-      reviewRepository.save(espuelas3);
+      Review phoMimosa1 = new Review();
+      phoMimosa1.setReview("Best pho in the state, they use high quality meats and the broth is authentic not oily. The owners are very caring friendly people and the prices are not expensive either just right. My bf and I go there twice a week, definitely recommend.");
+      phoMimosa1.setRestaurant(restaurantRepository.findByName("Phở Mimôsa").get());
+      phoMimosa1.setRestaurantRating(4);
+      phoMimosa1.setDatePosted(timestamp);
+      reviewRepository.save(phoMimosa1);
+
+      Review phoMimosa2 = new Review();
+      phoMimosa2.setReview("Authentic Vietnamese food with some Thai options on the menu. High quality sliced beef, tendons and beef balls. Enjoyed the piping hot beef-based pho soup, after a chilly visit from the mountain pass.");
+      phoMimosa2.setRestaurant(restaurantRepository.findByName("Phở Mimôsa").get());
+      phoMimosa2.setRestaurantRating(4);
+      phoMimosa2.setDatePosted(timestamp);
+      reviewRepository.save(phoMimosa2);
+
+      Review phoMimosa3 = new Review();
+      phoMimosa3.setReview("My husband and I travel a lot this the best pho I've ever had. The meat was just right and there were a ton of noodles. We order egg rolls my son are 2 of them. The service was the best!! He was on top of everything. Please check this place out.");
+      phoMimosa3.setRestaurant(restaurantRepository.findByName("Phở Mimôsa").get());
+      phoMimosa3.setRestaurantRating(4);
+      phoMimosa3.setDatePosted(timestamp);
+      reviewRepository.save(phoMimosa3);
+
+      Review phoMimosa4 = new Review();
+      phoMimosa4.setReview("Authentic Pho! I'm from the Rainier Valley neighborhood where all the best Vietnamese restaurants are located in Seattle. This place has good pho. All ingredients were super fresh and tasty. The chefs are Vietnamese so you know they make other really great dishes I've yet to try.");
+      phoMimosa4.setRestaurant(restaurantRepository.findByName("Phở Mimôsa").get());
+      phoMimosa4.setRestaurantRating(4);
+      phoMimosa4.setDatePosted(timestamp);
+      reviewRepository.save(phoMimosa4);
+
+      Review phoMimosa5 = new Review();
+      phoMimosa5.setReview("By far my favorite restaurant around, I love when I can take people there for the first time! The staff is amazing and friendly! So far haven't had a chicken pho that compares to theirs. Always my favorite day(s) of the week.");
+      phoMimosa5.setRestaurant(restaurantRepository.findByName("Phở Mimôsa").get());
+      phoMimosa5.setRestaurantRating(4);
+      phoMimosa5.setDatePosted(timestamp);
+      reviewRepository.save(phoMimosa5);
+
+      Review saigon1 = new Review();
+      saigon1.setReview("This was the first place we went to eat after the stay at home order was lifted. I am so glad we chose this place to be our first sit down meal in months. I'm very picky about pho but I have no issues with saying this place was absolutely delicious. We both got the pho with steak and tripe, and it was excellent. Good noodle consistency, broth flavor and and temperature were on point. The meat and tripe were of good quality, tender and not too chewy. The Thai ice tea was creamy and had the perfect amount of sweetness. Overall, a fantastic find.");
+      saigon1.setRestaurant(restaurantRepository.findByName("Saigon Pho And Grill").get());
+      saigon1.setRestaurantRating(4);
+      saigon1.setDatePosted(timestamp);
+      reviewRepository.save(saigon1);
+
+      Review saigon2 = new Review();
+      saigon2.setReview("The pho is spot on. Great broth with a nice anise flavor. The pepper calamari was light and perfectly crisp. Lemongrass shrimp had a great flavor and was served like a typical bun style dish. Very good. I was surprised to see the amount of great grill options here that not all other pho places have. Great service as well.");
+      saigon2.setRestaurant(restaurantRepository.findByName("Saigon Pho And Grill").get());
+      saigon2.setRestaurantRating(4);
+      saigon2.setDatePosted(timestamp);
+      reviewRepository.save(saigon2);
+
+      Review saigon3 = new Review();
+      saigon3.setReview("The pho is very good. Is it the best I've ever had? No. Thus the four stars instead of five. But it's up there in the top dozen or so places, and remember where this is. Broth is flavorful and balanced. No one spice overpowers everything. The only issue I had with my bowl of brisket, tendon, and meatballs was the density of the meatballs. These are very dense. They're good, but their super dense nature makes them a little less appealing. The brisket was superb. Some of the best I have ever had, and the tendons were good and relatively plentiful.");
+      saigon3.setRestaurant(restaurantRepository.findByName("Saigon Pho And Grill").get());
+      saigon3.setRestaurantRating(4);
+      saigon3.setDatePosted(timestamp);
+      reviewRepository.save(saigon3);
+
+      Review kona1 = new Review();
+      kona1.setReview("This is as close to Hawaii as I've gotten so far. Another gem in my neighborhood that for some reason took me so long to actually try. I kicked myself for not eating here sooner!! Forget the quick and easy college Hawaiian bbq place, go for the real deal with Kona!!");
+      kona1.setRestaurant(restaurantRepository.findByName("Kona Kitchen").get());
+      kona1.setRestaurantRating(4);
+      kona1.setDatePosted(timestamp);
+      reviewRepository.save(kona1);
+
+      Review kona2 = new Review();
+      kona2.setReview("I think this might be Kona Kitchen's 1000th review! Anyways, I've gone here ever since I was a little kid, and came here for several events whether it was a birthday party, family reunion, or just to have some good food during breakfast, brunch, lunch, and even dinner. I've really been here for many occasions , and I have always enjoyed the food here and I've had basically the same order throughout all these years.");
+      kona2.setRestaurant(restaurantRepository.findByName("Kona Kitchen").get());
+      kona2.setRestaurantRating(4);
+      kona2.setDatePosted(timestamp);
+      reviewRepository.save(kona2);
+
+      Review kona3 = new Review();
+      kona3.setReview("Ordered the mochiko chicken and the kalua pig and cabbage for takeout. The kalua pig was VERY good - there is a depth of smoky flavor and the texture is also incredible. The mochiko chicken was okay - it's one of those things that I think might be better if it were dine-in. Something similar to be said about the mac salad - which tasted a bit overcooked, but my guess is that the steam from the rice inside the packaging softened everything. Prices are a bit high, but portions are also large. Would be happy to try again!");
+      kona3.setRestaurant(restaurantRepository.findByName("Kona Kitchen").get());
+      kona3.setRestaurantRating(4);
+      kona3.setDatePosted(timestamp);
+      reviewRepository.save(kona3);
+
+      Review kona4 = new Review();
+      kona4.setReview("Ordered takeout during COVID-19. I got 2 Spam Musubi ($2/ea) and 2 Portuguese Sausage Musubi ($3.60/ea). I also got Kalua Pork ($11.30). Musubis were all very tasty and the meat to rice ratio was perfect. Seaweed also didn't fall apart easily. Maybe could have used a little more sauce so it wouldn't be too dry, but the flavor of the meat was great. Kalua pork was also very tasty. Not dry at all and the cabbage had soaked in all the juices. It came with mac salad and rice, but the mac salad was almost too sweet. I expected it to be more savory. Overall the portion sizes were good and the food was pretty good. I wasn't amazed, but I was satisfied. I'd be willing to give this place another try to see if their other dishes are better.");
+      kona4.setRestaurant(restaurantRepository.findByName("Kona Kitchen").get());
+      kona4.setRestaurantRating(4);
+      kona4.setDatePosted(timestamp);
+      reviewRepository.save(kona4);
     }
 
   }
