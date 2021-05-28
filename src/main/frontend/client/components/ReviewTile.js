@@ -6,13 +6,6 @@ const ReviewTile = props => {
 let date = new Date(props.datePosted).toDateString()
   return (
       <div className="review-tile">
-        <div className="review-form">        
-          <div className="write-review-button">
-            <Link to={`/${props.id}/review/new`}>Write a Review</Link>
-          </div>
-
-        </div>
-
         <div className="stars-and-review-date">
           <span className="review-stars">
             <ReviewStars

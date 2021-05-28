@@ -108,7 +108,7 @@ const RestaurantForm = props => {
               </label>
             </div>
 
-            <div className="input-box w50">
+            <div className="user-box">
               <label htmlFor="category">
                 Restaurant Category:
                 <select
@@ -173,8 +173,8 @@ const RestaurantForm = props => {
               </label>
             </div>
 
-            <div className="input-box w50">
-              <label htmlFor="healthDeptRating">
+            <div className="user-box">
+              <label htmlFor="healthDeptRating" id="fix-select-labels">
                 (Optional)Health Department Rating:
                 <select
                     id="healthDeptRating"

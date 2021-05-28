@@ -110,7 +110,7 @@ const ReviewFormForNewRestaurant = props => {
 
             <form onSubmit={handleSubmit} cid="review-form-box">
 
-              <div className="input-box w50">
+              <div className="user-box">
                 <label htmlFor="name">
                   Restaurant name
                   <select onChange={handleSelect}>

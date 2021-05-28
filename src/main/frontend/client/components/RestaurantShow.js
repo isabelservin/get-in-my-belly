@@ -54,6 +54,11 @@ const RestaurantShow = props => {
   <div className="content">
     <div className="grid-x grid-margin-x">
       <div className="cell small-8">
+        <div className="review-form">
+          <div className="write-review-button">
+            <Link to={`/${props.id}/review/new`}>Write a Review</Link>
+          </div>
+        </div>
         {reviewList}
       </div>
       <div className="cell small-4">
