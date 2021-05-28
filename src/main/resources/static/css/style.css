@@ -9,12 +9,60 @@
 }
 
 .restaurant-tile-show {
-  border: 1px solid #000;
+  background-color: #fff;
   padding: 2em;
+  box-shadow: 0 15px 30px rgb(0 0 0 / 5%);
+  font-variant: small-caps;
+  text-transform: lowercase;
+  letter-spacing: 0.1em;
 }
 
 .restaurant-tile-show h2 {
-margin: 0;
+  margin: 0;
+}
+
+.restaurant-tile-show img {
+  border-radius: 10px;
+  margin-bottom: 16px;
+}
+
+.review-tile {
+  padding-bottom: 2em;
+  margin-bottom: 2em;
+  border-bottom: 1px solid #ccc;
+}
+
+.stars-and-review-date {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 1.5em;
+}
+
+.review-date {
+  font-size: 0.8em;
+  margin-right: 0.3em;
+}
+
+.review-form {
+  text-align: right;
+}
+
+.write-review-button {
+  display: inline-block;
+  padding: 1em;
+  background-color: #ccc;
+  margin-bottom: 2em;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.write-review-button:hover {
+  background-color: #aaa;
+}
+
+.review-stars {
+  color: #333;
 }
 
 .address-phone-ul {

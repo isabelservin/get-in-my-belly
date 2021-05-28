@@ -3,23 +3,24 @@ import { Link } from "react-router-dom"
 import ReviewTile from "./ReviewTile";
 
 const RestaurantTile = props => {
+
+  let phoneFormat = ""
+  if (props.phoneNumber != undefined) {
+    phoneFormat = ["(", props.phoneNumber.slice(0,3), ") ", props.phoneNumber.slice(3, 6), "-", props.phoneNumber.slice(6)].join("")
+    console.log(phoneFormat)
+    
+  }
+
   return (
-    <div className="cell">
-      <div className="card">
-        <div className="card-divider">
-          <h2><Link to={`/${props.type}/restaurant/${props.id}`}>{props.name}</Link></h2>
-        </div>
-        <Link to={`/${props.type}/restaurant/${props.id}`}>
-          <img className="images thumbnail" src={props.imgUrl} />
-        </Link>
-        <div className="card-section">
-          <p>
-            <strong>Review:</strong><br/>
-            {/*<button className="review-button" href="/review/new" ><Link to="/review/new">Write a Review</Link></button>*/}
-            <button className="review-button" href="/review/new" ><Link to={`/${props.id}/review/new`}>Write a Review</Link></button>
-          </p>
-        </div>
-      </div>
+    <div>
+      <h2>{props.name}</h2>
+      <ul className="address-phone-ul">
+        <li>{props.category.type}</li>
+        <li>{phoneFormat}</li>
+        <li>{props.address}</li>
+      </ul>
+      <img src={props.imgUrl} />
+      <p>{props.description}</p>
     </div>
   )
 }

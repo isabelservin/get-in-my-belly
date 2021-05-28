@@ -51,7 +51,7 @@ const RestaurantShow = props => {
 
 
   return (
-  <div className="wrap-width">
+  <div className="content">
     <div className="grid-x grid-margin-x">
       <div className="cell small-8">
         {reviewList}

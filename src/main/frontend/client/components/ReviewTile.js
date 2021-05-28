@@ -1,13 +1,28 @@
 import React from "react"
 import { Link } from "react-router-dom"
+import ReviewStars from "./ReviewStars.js"
 
 const ReviewTile = props => {
 let date = new Date(props.datePosted).toDateString()
   return (
-      <div className="card-section">
-       <p> <strong>Rating:</strong> {props.rating} Out of 5 </p>
-       <p> <strong>Date Posted:</strong> {date}  </p>
-       <p> <strong>Review:</strong> {props.review}  </p>
+      <div className="review-tile">
+        <div className="review-form">        
+          <div className="write-review-button">
+            Write a Review
+          </div>
+        </div>
+
+        <div className="stars-and-review-date">
+          <span className="review-stars">
+            <ReviewStars
+              rating={props.rating}
+            />
+          </span>
+          <span className="review-date">{date}</span>
+        </div>
+        <div className="review-body">
+            {props.review}
+          </div>
       </div>
   )
 }
