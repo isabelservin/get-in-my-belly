@@ -36,7 +36,13 @@ const RestaurantList = props => {
       />
     )
   })
-  return <div>{restaurantList}<br/><br/></div>
-}
+    return (
+        <>
+        <div className="content">
+           <div>{restaurantList}<br/><br/></div>
+        </div>
+        </>
+    )
+  }
 
 export default RestaurantList
