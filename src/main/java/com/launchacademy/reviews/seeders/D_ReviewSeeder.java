@@ -44,7 +44,7 @@ public class D_ReviewSeeder implements CommandLineRunner {
       Review review3 = new Review();
       review3.setReview("I really like this place. The service was great. The food is a bit expensive for what you get. We got enchiladas ($16) which I'm used to filling up the plate but we only got two little guys about 5 inches long. They were delicious though and the smaller portion was perfect for one. I wish they were doing happy hour but I understand not doing it during COVID. Outdoor seating was great.");
       review3.setRestaurant(restaurantRepository.findByName("El Camino").get());
-      review3.setRestaurantRating(4);
+      review3.setRestaurantRating(5);
       review3.setDatePosted(timestamp);
       reviewRepository.save(review3);
 
@@ -65,7 +65,7 @@ public class D_ReviewSeeder implements CommandLineRunner {
       Review review6 = new Review();
       review6.setReview("This might sound a little wild, but I got my all four of my wisdom teeth extracted and my family decided to come here after my procedure. I was in agony. Unable to eat. This place made everything look so good. I don't know whether it was because I was just coming out of anesthesia, or they really knew what there were doing and throwing it down in the kitchen. Nonetheless, I would come here again--I didn't eat here--but my family says I gotta try it after my extraction sites heal.");
       review6.setRestaurant(restaurantRepository.findByName("Taqueira El Sabor").get());
-      review6.setRestaurantRating(4);
+      review6.setRestaurantRating(5);
       review6.setDatePosted(timestamp);
       reviewRepository.save(review6);
 
@@ -135,7 +135,7 @@ public class D_ReviewSeeder implements CommandLineRunner {
       Review camino1 = new Review();
       camino1.setReview("Best mexican restaurant! It's themed but not over done. The staff are so nice and extra careful with covid guidelines. There's always water on the table and the tequila is smooth. Food is the highlight for me though. I really appreciate the fresh vegetables in the vegetarian dish I had and the more elaborate options I had here than just beans and cheese. Will come again!");
       camino1.setRestaurant(restaurantRepository.findByName("El Camino").get());
-      camino1.setRestaurantRating(4);
+      camino1.setRestaurantRating(5);
       camino1.setDatePosted(timestamp);
       reviewRepository.save(camino1);
 
@@ -149,21 +149,21 @@ public class D_ReviewSeeder implements CommandLineRunner {
       Review camino3 = new Review();
       camino3.setReview("The food is PHENOMENAL here! Where to begin; the salsa, you could taste the flavors of the peppers without it being too spicy. Our entrees were literally making our tastebuds dance in our mouths! The carnitas were tender and juicy with fresh cut toppings. The poblano pepper and cheese burrito hands down HUGELY stuffed goodness! There was so much flavor in our dinner we couldn't choose which we liked the best because it was all such great food! Drinks were great! Atmosphere was fun and done with the right touches to focus on the best part about El Camino; THE FOOD!");
       camino3.setRestaurant(restaurantRepository.findByName("El Camino").get());
-      camino3.setRestaurantRating(4);
+      camino3.setRestaurantRating(5);
       camino3.setDatePosted(timestamp);
       reviewRepository.save(camino3);
 
       Review billiard1 = new Review();
       billiard1.setReview("Food review only - Best egg banh mi EVER!!!  I'm in love.  I go again and again.  And then again at 3am if I crave a late night snack.  Actually, all of their food is good.  You can do no wrong here.  Just close your eyes and point to an item on the menu and you won't be disappointed.  As long as their chef doesn't change, they've got themselves a lifetime customer.");
       billiard1.setRestaurant(restaurantRepository.findByName("Billiard Hoang").get());
-      billiard1.setRestaurantRating(4);
+      billiard1.setRestaurantRating(5);
       billiard1.setDatePosted(timestamp);
       reviewRepository.save(billiard1);
 
       Review billiard2 = new Review();
       billiard2.setReview("I give Billiard Hoang 5 stars because this place is truly a hole in the wall. Billiard Hoang is best known for their delicious Vietnamese sandwich with a fried egg (best in Seattle if you ask me--yes, better than Yeh Yeh and way better than all the bakeries near by). Location is very sketchy and it is highly recommended to go with someone Vietnamese or a regular.");
       billiard2.setRestaurant(restaurantRepository.findByName("Billiard Hoang").get());
-      billiard2.setRestaurantRating(4);
+      billiard2.setRestaurantRating(5);
       billiard2.setDatePosted(timestamp);
       reviewRepository.save(billiard2);
 
@@ -177,7 +177,7 @@ public class D_ReviewSeeder implements CommandLineRunner {
       Review ono1 = new Review();
       ono1.setReview("Anytime I'm in Edmonds, I have to stop by Ono Poke. Their Poke is so fresh and simple and they always have different poke every time I come, so I have to try them all. Whenever I go here, I always pick up a poke bowl with two choices. One of the choices is usually one of their different flavored ahi and the other can be anything from their spicy salmon, crab okole, tako, hamachi or anything I feel like. Also, make sure you don't forget the sides. I'm in love with their spicy Kimchee cucumber as well as their Mac Salad. I'm a sucker for Mac Salad and they do it well here. If you're an edamame fan, you might as well add that too. Ono Poke just has that relaxed feel. Even with the pandemic, they keep it very safe, clean, and organized for the customers, but they still keep that welcoming feel. The owners and staff here treat you like they've known you for decades and you can tell customers keep coming back. This is one of my favorite spots in town and I always love coming here.");
       ono1.setRestaurant(restaurantRepository.findByName("Ono Poke").get());
-      ono1.setRestaurantRating(4);
+      ono1.setRestaurantRating(5);
       ono1.setDatePosted(timestamp);
       reviewRepository.save(ono1);
 
@@ -191,7 +191,7 @@ public class D_ReviewSeeder implements CommandLineRunner {
       Review ono3 = new Review();
       ono3.setReview("Best POKE in Washington. Simply because of the authenticity in the way they serve there POKE. Its like getting it from Food land In Hawaii. The common Poke here in WA has a lot of color and toppings and all but that is just not what Poke is. Usually there isn't a lot of toppings and all this stuff in Poke.  Nothing to fancy just the Poke and rice. A good amount of Poke and there seasoning and flavoring is very Yummy. I suggest there spicy Hamachi and Spicy Salmon if you can handle a little spice. Very very good Poke");
       ono3.setRestaurant(restaurantRepository.findByName("Ono Poke").get());
-      ono3.setRestaurantRating(4);
+      ono3.setRestaurantRating(5);
       ono3.setDatePosted(timestamp);
       reviewRepository.save(ono3);
 
@@ -205,7 +205,7 @@ public class D_ReviewSeeder implements CommandLineRunner {
       Review taqueria2 = new Review();
       taqueria2.setReview("I was nearby and dire need of something quick to eat. I do not regret this decision one bit! I ordered veggie gorditas and they were very good and well filled! There is a salsa bar of lots of options for you to choose from. I wish they had signs on spice level for each because I was unsure which ones I was picking.");
       taqueria2.setRestaurant(restaurantRepository.findByName("Taqueira El Sabor").get());
-      taqueria2.setRestaurantRating(4);
+      taqueria2.setRestaurantRating(5);
       taqueria2.setDatePosted(timestamp);
       reviewRepository.save(taqueria2);
 
@@ -219,7 +219,7 @@ public class D_ReviewSeeder implements CommandLineRunner {
       Review hani1 = new Review();
       hani1.setReview("Found this place on a whim when we’re craving for Poke Bowls on the way home to Seattle from Everett. The neighborhood was very dark and too quiet, we thought we were lost. But the Poke here is so rewarding! Great price and we can decide whichever proteins and toppings we want. Tasted awesome and fresh, too. We ended up ordering an extra to go.");
       hani1.setRestaurant(restaurantRepository.findByName("Hani Hani").get());
-      hani1.setRestaurantRating(4);
+      hani1.setRestaurantRating(5);
       hani1.setDatePosted(timestamp);
       reviewRepository.save(hani1);
 
@@ -233,7 +233,7 @@ public class D_ReviewSeeder implements CommandLineRunner {
       Review hani3 = new Review();
       hani3.setReview("Awesome shop! We got the chicken katsu with fried rice and mac salad as well as the BBQ chicken and some Sspam Musabi. Everything was flavorful and hit the spot. I'm excited to try some of their other offerings next time.");
       hani3.setRestaurant(restaurantRepository.findByName("Hani Hani").get());
-      hani3.setRestaurantRating(4);
+      hani3.setRestaurantRating(5);
       hani3.setDatePosted(timestamp);
       reviewRepository.save(hani3);
 
@@ -247,7 +247,7 @@ public class D_ReviewSeeder implements CommandLineRunner {
       Review moctezuma2 = new Review();
       moctezuma2.setReview("Great restaurant ! Grateful! They are open during this time ! Service was very friendly. A few things messed up with our food, but it was quickly fixed. Their queso fondito was amazing, especially with the chorizo! Their chille rellenos are great too although I wish the cheese was melted more inside. Their carne asada is so flavorful. My favorite thing of all is their chips and salsa. Love this place !");
       moctezuma2.setRestaurant(restaurantRepository.findByName("Moctezuma's").get());
-      moctezuma2.setRestaurantRating(4);
+      moctezuma2.setRestaurantRating(5);
       moctezuma2.setDatePosted(timestamp);
       reviewRepository.save(moctezuma2);
 
@@ -261,7 +261,7 @@ public class D_ReviewSeeder implements CommandLineRunner {
       Review cocinaOaxaqueña1 = new Review();
       cocinaOaxaqueña1.setReview("Homemade tortilla for the quesadilla was a huge win with my little guy! The food and service overall was great! The pitcher of Sangria was so delicious, both my husband and I enjoyed it. It was the perfect dinner for our last night in Seattle.");
       cocinaOaxaqueña1.setRestaurant(restaurantRepository.findByName("La Cocina Oaxaqueña").get());
-      cocinaOaxaqueña1.setRestaurantRating(4);
+      cocinaOaxaqueña1.setRestaurantRating(5);
       cocinaOaxaqueña1.setDatePosted(timestamp);
       reviewRepository.save(cocinaOaxaqueña1);
 
@@ -275,7 +275,7 @@ public class D_ReviewSeeder implements CommandLineRunner {
       Review cocinaOaxaqueña3 = new Review();
       cocinaOaxaqueña3.setReview("This is one of my favorites Mexican restaurants around Seattle. Everything looks super fresh and delicious. The plates have a perfect size no too big no too small, and there isn’t nothing to complain about the prices.");
       cocinaOaxaqueña3.setRestaurant(restaurantRepository.findByName("La Cocina Oaxaqueña").get());
-      cocinaOaxaqueña3.setRestaurantRating(4);
+      cocinaOaxaqueña3.setRestaurantRating(5);
       cocinaOaxaqueña3.setDatePosted(timestamp);
       reviewRepository.save(cocinaOaxaqueña3);
 
@@ -296,7 +296,7 @@ public class D_ReviewSeeder implements CommandLineRunner {
       Review phoHouse3 = new Review();
       phoHouse3.setReview("Their food is amazing!! The cook in the back I've been following him for about 5 yrs now. The pho is exceptional! The rice plate is amazing without the sauce! Def our new fav spot and the staff is friendly and efficient!");
       phoHouse3.setRestaurant(restaurantRepository.findByName("Pho Nguyen’s House").get());
-      phoHouse3.setRestaurantRating(4);
+      phoHouse3.setRestaurantRating(5);
       phoHouse3.setDatePosted(timestamp);
       reviewRepository.save(phoHouse3);
 
@@ -310,7 +310,7 @@ public class D_ReviewSeeder implements CommandLineRunner {
       Review marination2 = new Review();
       marination2.setReview("Comfort food in colors and textures that are surprising, but balanced and delicious. Add to that a spacious waterside patio with a postcard-worthy view to downtown Seattle. Please go. I wish I lived closer.");
       marination2.setRestaurant(restaurantRepository.findByName("Marination Ma Kai").get());
-      marination2.setRestaurantRating(4);
+      marination2.setRestaurantRating(5);
       marination2.setDatePosted(timestamp);
       reviewRepository.save(marination2);
 
@@ -324,7 +324,7 @@ public class D_ReviewSeeder implements CommandLineRunner {
       Review marination4 = new Review();
       marination4.setReview("Needed to try the fish and chips. Was told it was one of the best in Seattle. I can truly say the breeding is so crispy and the fish itself is very very juicy. You get 2 pieces. The tarter sauce is just right, it gives it that extra kick with a squirt of lemon. The fries on there own are great. There saltines is just perfeft and gives a balance to the whole meal. Will definitely be back.");
       marination4.setRestaurant(restaurantRepository.findByName("Marination Ma Kai").get());
-      marination4.setRestaurantRating(4);
+      marination4.setRestaurantRating(5);
       marination4.setDatePosted(timestamp);
       reviewRepository.save(marination4);
 
@@ -345,7 +345,7 @@ public class D_ReviewSeeder implements CommandLineRunner {
       Review tijuana3 = new Review();
       tijuana3.setReview("I love tacos and this might be my new favorite place to visit when I have a craving. The tacos might be a bit pricey but well worth it for what you get. In the age of COVID I was happy to see that everyone was wearing a mask and social distancing which made it even better.");
       tijuana3.setRestaurant(restaurantRepository.findByName("Tijuana Restaurant").get());
-      tijuana3.setRestaurantRating(4);
+      tijuana3.setRestaurantRating(5);
       tijuana3.setDatePosted(timestamp);
       reviewRepository.save(tijuana3);
 
@@ -359,7 +359,7 @@ public class D_ReviewSeeder implements CommandLineRunner {
       Review yehyeh2 = new Review();
       yehyeh2.setReview("I live in North Seattle and I never think twice about driving up further north for One of the Best Bahn Mi Sandwiches around and for their Full-flavored Beef Broth Pho, which is also some of the best Pho I've had in the area. This place is definitely worth the trip! So do yourselves a big favor and eat here.");
       yehyeh2.setRestaurant(restaurantRepository.findByName("Yeh Yeh's").get());
-      yehyeh2.setRestaurantRating(4);
+      yehyeh2.setRestaurantRating(5);
       yehyeh2.setDatePosted(timestamp);
       reviewRepository.save(yehyeh2);
 
@@ -380,7 +380,7 @@ public class D_ReviewSeeder implements CommandLineRunner {
       Review espuelas1 = new Review();
       espuelas1.setReview("Came to this place because my wife and I felt like having Mexican food. We hadn't been to a Mexican restaurant in over 4 months because we make our own food. This place caught our eye because of the name so we figured we'd try it out. As soon as we walked in you can see the cleanliness of the place and smell the food. People were very kind and got us seated right away. Not a huge menu and that's what I like. If you've got a big menu then you have to say to yourself that they ain't making all that stuff from scratch. Our experience was an excellent one as the server was always checking to see if we needed anything and was very prompt with our requests. Food was delicious!  I know I ordered enchiladas, which is pretty plain for a Mexican restaurant, but the flavor was perfect especially with that salsa verde. Chips and salsa was good and also came with a pico de gallo that had nopales (cactus). I would go back to this place just because. Highly recommend it.");
       espuelas1.setRestaurant(restaurantRepository.findByName("Las Espuelas").get());
-      espuelas1.setRestaurantRating(4);
+      espuelas1.setRestaurantRating(5);
       espuelas1.setDatePosted(timestamp);
       reviewRepository.save(espuelas1);
 
@@ -394,7 +394,7 @@ public class D_ReviewSeeder implements CommandLineRunner {
       Review phoMimosa1 = new Review();
       phoMimosa1.setReview("Best pho in the state, they use high quality meats and the broth is authentic not oily. The owners are very caring friendly people and the prices are not expensive either just right. My bf and I go there twice a week, definitely recommend.");
       phoMimosa1.setRestaurant(restaurantRepository.findByName("Phở Mimôsa").get());
-      phoMimosa1.setRestaurantRating(4);
+      phoMimosa1.setRestaurantRating(5);
       phoMimosa1.setDatePosted(timestamp);
       reviewRepository.save(phoMimosa1);
 
@@ -408,7 +408,7 @@ public class D_ReviewSeeder implements CommandLineRunner {
       Review phoMimosa3 = new Review();
       phoMimosa3.setReview("My husband and I travel a lot this the best pho I've ever had. The meat was just right and there were a ton of noodles. We order egg rolls my son are 2 of them. The service was the best!! He was on top of everything. Please check this place out.");
       phoMimosa3.setRestaurant(restaurantRepository.findByName("Phở Mimôsa").get());
-      phoMimosa3.setRestaurantRating(4);
+      phoMimosa3.setRestaurantRating(5);
       phoMimosa3.setDatePosted(timestamp);
       reviewRepository.save(phoMimosa3);
 
@@ -422,7 +422,7 @@ public class D_ReviewSeeder implements CommandLineRunner {
       Review phoMimosa5 = new Review();
       phoMimosa5.setReview("By far my favorite restaurant around, I love when I can take people there for the first time! The staff is amazing and friendly! So far haven't had a chicken pho that compares to theirs. Always my favorite day(s) of the week.");
       phoMimosa5.setRestaurant(restaurantRepository.findByName("Phở Mimôsa").get());
-      phoMimosa5.setRestaurantRating(4);
+      phoMimosa5.setRestaurantRating(5);
       phoMimosa5.setDatePosted(timestamp);
       reviewRepository.save(phoMimosa5);
 
@@ -436,7 +436,7 @@ public class D_ReviewSeeder implements CommandLineRunner {
       Review saigon2 = new Review();
       saigon2.setReview("The pho is spot on. Great broth with a nice anise flavor. The pepper calamari was light and perfectly crisp. Lemongrass shrimp had a great flavor and was served like a typical bun style dish. Very good. I was surprised to see the amount of great grill options here that not all other pho places have. Great service as well.");
       saigon2.setRestaurant(restaurantRepository.findByName("Saigon Pho And Grill").get());
-      saigon2.setRestaurantRating(4);
+      saigon2.setRestaurantRating(5);
       saigon2.setDatePosted(timestamp);
       reviewRepository.save(saigon2);
 
@@ -457,7 +457,7 @@ public class D_ReviewSeeder implements CommandLineRunner {
       Review kona2 = new Review();
       kona2.setReview("I think this might be Kona Kitchen's 1000th review! Anyways, I've gone here ever since I was a little kid, and came here for several events whether it was a birthday party, family reunion, or just to have some good food during breakfast, brunch, lunch, and even dinner. I've really been here for many occasions , and I have always enjoyed the food here and I've had basically the same order throughout all these years.");
       kona2.setRestaurant(restaurantRepository.findByName("Kona Kitchen").get());
-      kona2.setRestaurantRating(4);
+      kona2.setRestaurantRating(5);
       kona2.setDatePosted(timestamp);
       reviewRepository.save(kona2);
 
