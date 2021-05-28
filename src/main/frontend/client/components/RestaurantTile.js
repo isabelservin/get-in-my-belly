@@ -7,8 +7,6 @@ const RestaurantTile = props => {
   let phoneFormat = ""
   if (props.phoneNumber != undefined) {
     phoneFormat = ["(", props.phoneNumber.slice(0,3), ") ", props.phoneNumber.slice(3, 6), "-", props.phoneNumber.slice(6)].join("")
-    console.log(phoneFormat)
-    
   }
 
   return (

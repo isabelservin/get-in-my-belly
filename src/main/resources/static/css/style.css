@@ -97,3 +97,19 @@ font-size: .75em;
 form {
   margin-top: 80px;
 }
+
+.write-review-button {
+  background-color: #F79628;
+}
+
+.button {
+  background-color: #1779ba;
+  color: #fefefe;
+  display: block;
+  position: absolute;
+  margin-top: 30%;
+  margin-left: 42%;
+  padding: 20px;
+  font-size: 1.3em;
+  border-radius: 10px;
+}
