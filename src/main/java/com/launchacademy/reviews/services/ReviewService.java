@@ -28,8 +28,15 @@ public class ReviewService {
   }
 
   public Review save(Review review) {
-    System.out.println(review);
+    Restaurant newRestaurant;
     Optional<Restaurant> current = restaurantRepository.findById(review.getRestaurant().getId());
+    review.setRestaurant(current.get());
+    return reviewRepository.save(review);
+  }
+
+  public Review saveNew(Review review) {
+    Restaurant newRestaurant;
+    Optional<Restaurant> current = restaurantRepository.findByName(review.getRestaurant().getName());
     review.setRestaurant(current.get());
     return reviewRepository.save(review);
   }

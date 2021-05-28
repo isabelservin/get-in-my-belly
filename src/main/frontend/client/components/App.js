@@ -9,7 +9,7 @@ import NavBar from "./NavBar"
 import RestaurantShow from "./RestaurantShow"
 import CategoryList from "./CategoryList"
 import PageNotFound from "./PageNotFound";
-
+import ReviewFormForNewRestaurant from "./ReviewFormForNewRestaurant";
 
 const App = props => {
   return (
@@ -24,7 +24,7 @@ const App = props => {
               <Route exact path="/:categoryName/restaurants" component={RestaurantList} />
               <Route exact path="/restaurant/new" component={RestaurantForm} />
               <Route exact path="/:restaurantId/review/new" component={ReviewForm} />
-              <Route exact path="/review/new" component={ReviewForm} />
+              <Route exact path="/review/new" component={ReviewFormForNewRestaurant} />
               <Route exact path="/:categoryName/restaurant/:id" component={RestaurantShow} />
               <Route exact path="/categories" component={CategoryList} />
               <Route exact path="/404" component={PageNotFound} />

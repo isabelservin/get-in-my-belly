@@ -63,4 +63,8 @@ public class Restaurant {
   public Restaurant(Integer id) {
     this.id = id;
   }
+
+  public Restaurant(String name) {
+    this.name = name;
+  }
 }

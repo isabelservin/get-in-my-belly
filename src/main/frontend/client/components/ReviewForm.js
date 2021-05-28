@@ -74,7 +74,7 @@ const ReviewForm = props => {
     const requiredFields = ["name", "restaurantRating", "review"]
     requiredFields.forEach(field => {
       if (newReview[field].trim() === "") {
-        submitErrors = {...submitErrors, [field]: "is required." }
+        submitErrors = {...submitErrors, [field]: "is required."}
       }
     })
     setErrors(submitErrors)
@@ -94,84 +94,67 @@ const ReviewForm = props => {
     newReview.address = currentRestaurant.address
     newReview.phoneNumber = currentRestaurant.phoneNumber
     // newReview.restaurantId = restaurantId
-    const restaurantObj = { ...newReview, restaurant: { id: restaurantId }}
+    const restaurantObj = {...newReview, restaurant: {id: restaurantId}}
     if (isFormComplete()) {
       addNewReview(restaurantObj)
     }
   }
 
   if (redirect) {
-    return <Redirect to = "/categories" />
+    return <Redirect to="/categories"/>
   }
 
   return (
-    <form onSubmit={handleSubmit} className="restaurant_app">
-      <div className="grid-contrainer">
-        <div className="grid-x grid-padding-x">
+      <>
+        <h2>Add New Review!</h2>
+        <form onSubmit={handleSubmit} className="restaurant_app">
           <div className="cell">
-            <h2>Add New Review!</h2>
-            <Error errors={errors} />
+            <Error errors={errors}/>
           </div>
+          <label htmlFor="name">
+            Restaurant name
+            <input id="name" type="text" name="name" onChange={handleChange}
+                   value={currentRestaurant.name}/>
+          </label>
 
-          <div className="row">
-            <div className="medium-6 columns">
-              <label htmlFor="name">
-                Restaurant name
-                <input id="name" type="text" name="name" onChange={handleChange} value={currentRestaurant.name} />
-              </label>
-            </div>
-          </div>
+          <label htmlFor="address">
+            Restaurant address
+            <input id="address" type="text" name="address"
+                   onChange={handleChange} value={currentRestaurant.address}/>
+          </label>
 
-          <div className="row">
-            <div className="medium-6 columns">
-              <label htmlFor="address">
-                Restaurant address
-                <input id="address" type="text" name="address" onChange={handleChange} value={currentRestaurant.address} />
-              </label>
-            </div>
-          </div>
+          <label htmlFor="phoneNumber">
+            Restaurant phone number
+            <input id="phoneNumber" type="text" name="phoneNumber"
+                   onChange={handleChange}
+                   value={currentRestaurant.phoneNumber}/>
+          </label>
 
-          <div className="row">
-            <div className="medium-6 columns">
-              <label htmlFor="phoneNumber">
-                Restaurant phone number
-                <input id="phoneNumber" type="text" name="phoneNumber" onChange={handleChange} value={currentRestaurant.phoneNumber} />
-              </label>
-            </div>
-          </div>
+          <label htmlFor="restaurantRating">
+            Rating
+            <input
+                id="restaurantRating"
+                type="text"
+                name="restaurantRating"
+                onChange={handleChange}
+                value={newReview.restaurantRating}
+            />
+          </label>
 
-            <div className="medium-6 columns">
-              <label htmlFor="restaurantRating">
-                Rating
-                <input
-                  id="restaurantRating"
-                  type="text"
-                  name="restaurantRating"
-                  onChange={handleChange}
-                  value={newReview.restaurantRating}
-                />
-              </label>
-            </div>
+          <label htmlFor="review">
+            Your review:
+            <input
+                id="review"
+                type="text"
+                name="review"
+                onChange={handleChange}
+                value={newReview.review}
+            />
+          </label>
 
-          <div className="row">
-            <div className="medium-6 columns">
-              <label htmlFor="review">
-                Your review:
-                <input
-                  id="review"
-                  type="text"
-                  name="review"
-                  onChange={handleChange}
-                  value={newReview.review}
-                />
-              </label>
-            </div>
-          </div>
-
-          <input className="button round" type="submit" value="Submit Review" />
-        </div>
-      </div>
-    </form>
+          <input className="button round" type="submit" value="Submit Review"/>
+        </form>
+      </>
   )
 }
 

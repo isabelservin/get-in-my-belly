@@ -23,4 +23,9 @@ public class ReviewRestApiController {
   public Review create(@RequestBody Review review) {
     return reviewService.save(review);
   }
+
+  @PostMapping("/new")
+  public Review createNew(@RequestBody Review review) {
+    return reviewService.saveNew(review);
+  }
 }
