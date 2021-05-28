@@ -160,7 +160,7 @@ public class B_RestaurantSeeder implements CommandLineRunner {
 
       Restaurant ono = new Restaurant();
       ono.setCategory(categories.get(1));
-      ono.setName("Ono Authentic Hawaiian Poke");
+      ono.setName("Ono Poke");
       ono.setImageUrl("https://s3-media0.fl.yelpcdn.com/bphoto/2FeLnbSs8qHQmmjDZYMebw/o.jpg");
       ono.setAddress("10016 Edmonds Way Ste E, Edmonds, WA 98020");
       ono.setPhoneNumber("4253617064");
