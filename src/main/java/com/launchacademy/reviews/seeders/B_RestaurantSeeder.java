@@ -188,16 +188,6 @@ public class B_RestaurantSeeder implements CommandLineRunner {
       yeh.setDescription("Counter-serve Vietnamese eatery known for banh mi & beef stew turned out in a bare-bones setting.");
       restaurantRepository.save(yeh);
 
-      Restaurant kono = new Restaurant();
-      kono.setCategory(categories.get(1));
-      kono.setName("Kono Kitchen");
-      kono.setImageUrl("https://s3-media0.fl.yelpcdn.com/bphoto/N36tmF9iAqObIDxp1sv98A/o.jpg");
-      kono.setAddress("8501 5th Ave NE, Seattle, 98115");
-      kono.setPhoneNumber("2065175662");
-      kono.setHealthDeptRating(3);
-      kono.setDescription("A casual family dining experience where you’ll find a tempting array of Hawaiian and Japanese dishes prepared with the care of a home-cooked meal.");
-      restaurantRepository.save(kono);
-
       Restaurant espuelas = new Restaurant();
       espuelas.setCategory(categories.get(2));
       espuelas.setName("Las Espuelas");
