@@ -2,6 +2,7 @@ import React, { useState, useEffect} from "react";
 import RestaurantTile from "./RestaurantTile.js"
 import ReviewTile from "./ReviewTile.js"
 import {Redirect} from "react-router-dom";
+import { Link } from "react-router-dom"
 
 const RestaurantShow = props => {
   const [restaurant, setRestaurant] = useState([]);
