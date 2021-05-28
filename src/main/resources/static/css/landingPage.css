@@ -66,6 +66,7 @@
   /* Izzy, nice way to handle the height here*/
   display: flex;
   justify-content: center;
+  padding-left: 121px;
 }
 
 /* this is what was making your flex alignment wonky. it's not needed
