@@ -124,7 +124,7 @@ const ReviewForm = props => {
 
 
             <form onSubmit={handleSubmit} >
-                <div className="user-box">
+                <div className="user-box hidden" >
                     <label htmlFor="name"> Restaurant Name
                      <input id="name"
                      type="text"
@@ -134,7 +134,7 @@ const ReviewForm = props => {
                     </label>
                 </div>
 
-                <div className="user-box">
+                <div className="user-box hidden">
                      <label htmlFor="address">
                         Restaurant Address
                         <input id="address"
@@ -144,7 +144,7 @@ const ReviewForm = props => {
                      </label>
                  </div>
 
-                <div className="user-box">
+                <div className="user-box hidden">
                      <label htmlFor="phoneNumber">
                         Restaurant phone number
                         <input id="phoneNumber"
