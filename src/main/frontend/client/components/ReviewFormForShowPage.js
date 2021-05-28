@@ -97,10 +97,6 @@ const ReviewFormForNewRestaurant = props => {
     }
   }
 
-  // if (redirect) {
-  //   return <Redirect to="/categories"/>
-  // }
-
   return (
       <>
         <form onSubmit={handleSubmit} className="restaurant_app">
@@ -137,12 +133,3 @@ const ReviewFormForNewRestaurant = props => {
 }
 
 export default ReviewFormForNewRestaurant
-
-{/* <label htmlFor="name">
-            Restaurant name
-            <select onChange={handleSelect}>
-              <option value=""> -- Select a Restaurant -- </option>
-              {restaurantsList.map((restaurant) => <option value={restaurant.name}>{restaurant.name}</option>)}
-            </select>
-
-          </label> */}

@@ -2,7 +2,6 @@ import React, { useState, useEffect} from "react";
 import RestaurantTile from "./RestaurantTile.js"
 import ReviewTile from "./ReviewTile.js"
 import {Redirect} from "react-router-dom";
-import { Link } from "react-router-dom"
 
 const RestaurantShow = props => {
   const [restaurant, setRestaurant] = useState([]);
@@ -58,9 +57,9 @@ const RestaurantShow = props => {
     <div className="grid-x grid-margin-x">
       <div className="cell small-8">
         <div className="review-form">
-          <div className="write-review-button">
-            <Link to={`/${props.id}/review/new`}>Write a Review</Link>
-          </div>
+          {/*<div className="write-review-button">*/}
+          {/*  <Link to={`/${props.id}/review/new`}>Write a Review</Link>*/}
+          {/*</div>*/}
         </div>
         {reviewList}
       </div>
