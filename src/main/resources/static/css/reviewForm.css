@@ -1,18 +1,59 @@
 #review-form{
-  position: absolute;
-  top: 800px;
-  left: 50%;
-  width: 1033px;
-  padding: 40px;
-  transform: translate(-50%, -50%);
-    background: rgb(23 121 186 / 0%);  box-sizing: border-box;
+  width: 80%;
+  max-width: 1000px;
+  padding: 40px 99px;
+  font-variant: small-caps;
+  text-transform: lowercase;
+  font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;
+  background: rgb(23 121 186 / 0%);  box-sizing: border-box;
   box-shadow: 0 15px 25px rgba(0,0,0,.6);
   border-radius: 10px;
+  margin: 4em auto;
 }
 
 #review-form h2 {
   margin: 0 0 30px;
   padding: 0;
-  color: teal;
+  color: #1779BA;
   text-align: center;
+}
+
+#review-form .user-box{
+    position:relative;
+}
+
+#review-form .user-box input {
+    width: 100%;
+    padding: 8px 14px;
+    font-size: 20px;
+    color: black;
+    margin-bottom: 27px;
+    border: none;
+    border-bottom: 1px solid #62C2F4;
+    outline: none;
+    box-shadow: none;
+    background: white;
+    size:60px;
+ }
+
+ #review-form .user-box label {
+   padding: 10px 0;
+   color: #1779BA;
+   font-size: 25px;
+   #1779BA;
+   pointer-events: none;
+   transition: .5s;
+ }
+
+ #review-form .user-box input:focus ~ label,
+ #review-form .user-box input:valid ~ label {
+   top: -20px;
+   left: 0;
+   font-size: 12px;
+}
+
+#review-form .button {
+    border-radius:50px;
+    background-color: #aaa;
+    color:white;
 }
