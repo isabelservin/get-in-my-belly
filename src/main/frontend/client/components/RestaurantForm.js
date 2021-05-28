@@ -1,6 +1,6 @@
 import _ from "lodash"
-import React, { useState } from "react"
-import { Redirect } from "react-router-dom"
+import React, {useState} from "react"
+import {Redirect} from "react-router-dom"
 
 import Error from "./Error"
 
@@ -49,9 +49,8 @@ const RestaurantForm = props => {
     }
   }
 
-
   if (redirect) {
-    return <Redirect to = {`/${newRestaurant.category}/restaurants`} />
+    return <Redirect to={`/${newRestaurant.category}/restaurants`}/>
   }
 
   const handleChange = event => {
@@ -73,7 +72,7 @@ const RestaurantForm = props => {
     ]
     requiredFields.forEach(field => {
       if (newRestaurant[field].trim() === "") {
-        submissionErrors = { ...submissionErrors, [field]: `is required` }
+        submissionErrors = {...submissionErrors, [field]: `is required`}
       }
     })
     setErrors(submissionErrors)
@@ -88,124 +87,119 @@ const RestaurantForm = props => {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="restaurant_app">
-      <div className="grid-container">
-        <div className="grid-x grid-padding-x">
-          <div className="cell">
-            <h2>Add New Restaurant:</h2>
-            <Error errors={errors} />
+      <>
+      <div id="review-form">
+        <div className="review-form-container">
+          <div>
           </div>
+        </div>
+        <div className="review-form-right-side">
+          <h2>Add a new Restaurant...</h2>
+          <Error errors={errors}/>
 
-          <div className="row">
-            <div className="medium-6 columns">
+          <form onSubmit={handleSubmit} id="review-form-box">
+
+            <div className="input-box w50">
               <label htmlFor="name">
                 Restaurant Name:
                 <input id="name"
-                type="text"
-                name="name"
-                onChange={handleChange}
-                value={newRestaurant.name} />
+                       type="text"
+                       name="name"
+                       onChange={handleChange}
+                       value={newRestaurant.name}/>
               </label>
             </div>
-          </div>
 
-            <div className="medium-6 columns">
+            <div className="input-box w50">
               <label htmlFor="category">
                 Restaurant Category:
                 <select
-                  id="category"
-                  name="category"
-                  onChange={handleChange}
+                    id="category"
+                    name="category"
+                    onChange={handleChange}
                     value={newRestaurant.category}
-                  >
+                >
                   <option value="">Please Select Category</option>
                   <option value="Vietnamese">Vietnamese</option>
                   <option value="Pacific Island">Pacific Island</option>
                   <option value="Mexican">Mexican</option>
-                  </select>
+                </select>
               </label>
             </div>
 
-          <div className="row">
-            <div className="medium-6 columns">
+            <div className="input-box w50">
               <label htmlFor="imageUrl">
                 Add food image URL:
                 <input
-                  id="imageUrl"
-                  type="text"
-                  name="imageUrl"
-                  onChange={handleChange}
-                  value={newRestaurant.imageUrl}
+                    id="imageUrl"
+                    type="text"
+                    name="imageUrl"
+                    onChange={handleChange}
+                    value={newRestaurant.imageUrl}
                 />
               </label>
             </div>
-          </div>
 
-          <div className="row">
-            <div className="medium-6 columns">
+            <div className="input-box w50">
               <label htmlFor="phoneNumber">
                 Restaurant Phone number:
                 <input id="phoneNumber"
-                type="text"
-                name="phoneNumber"
-                onChange={handleChange}
-                value={newRestaurant.phoneNumber} />
+                       type="text"
+                       name="phoneNumber"
+                       onChange={handleChange}
+                       value={newRestaurant.phoneNumber}/>
               </label>
             </div>
-          </div>
 
-          <div className="row">
-            <div className="medium-6 columns">
+            <div className="input-box w50">
               <label htmlFor="address">
                 Restaurant Address:
                 <input id="address"
-                type="text"
-                name="address"
-                onChange={handleChange}
-                value={newRestaurant.address} />
+                       type="text"
+                       name="address"
+                       onChange={handleChange}
+                       value={newRestaurant.address}/>
               </label>
             </div>
-          </div>
 
-          <div className="row">
-            <div className="medium-6 columns">
+            <div className="input-box w50">
               <label htmlFor="description">
                 Add description:
                 <input
-                  id="description"
-                  type="text"
-                  name="description"
-                  onChange={handleChange}
-                  value={newRestaurant.description}
+                    id="description"
+                    type="text"
+                    name="description"
+                    onChange={handleChange}
+                    value={newRestaurant.description}
                 />
               </label>
             </div>
-          </div>
 
-            <div className="medium-6 columns">
+            <div className="input-box w50">
               <label htmlFor="healthDeptRating">
                 (Optional)Health Department Rating:
                 <select
-                  id="healthDeptRating"
-                  name="healthDeptRating"
-                  onChange={handleChange}
+                    id="healthDeptRating"
+                    name="healthDeptRating"
+                    onChange={handleChange}
                     value={newRestaurant.healthDeptRating}
-                  >
+                >
                   <option value="">Please Select Rating:</option>
                   <option value="0">N/A</option>
                   <option value="1">Need to Improve</option>
                   <option value="2">OK</option>
                   <option value="3">Good</option>
                   <option value="4">Excellent</option>
-                  </select>
+                </select>
               </label>
             </div>
 
-          <input className="button round" type="submit" value="Submit" />
-        </div>
-      </div>
-    </form>
+            <input className="button round" type="submit" value="Submit"/>
+      </form>
 
-  )
+</div>
+</div>
+</>
+)
 }
 export default RestaurantForm

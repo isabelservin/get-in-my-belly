@@ -99,44 +99,58 @@ const ReviewFormForNewRestaurant = props => {
 
   return (
       <>
-        <h2>Add New Review!</h2>
-        <form onSubmit={handleSubmit} className="restaurant_app">
-          <div className="cell">
-            <Error errors={errors}/>
+        <div id="review-form">
+          <div className="review-form-container">
+            <div>
+            </div>
           </div>
-          <label htmlFor="name">
-            Restaurant name
-            <select onChange={handleSelect}>
-              <option value=""> -- Select a Restaurant -- </option>
-              {restaurantsList.map((restaurant) => <option value={restaurant.name}>{restaurant.name}</option>)}
-            </select>
+          <div className="review-form-right-side">
+            <h2>Add New Review!</h2>
+            <Error errors={errors}/>
 
-          </label>
+            <form onSubmit={handleSubmit} cid="review-form-box">
 
-          <label htmlFor="restaurantRating">
-            Rating
-            <input
-                id="restaurantRating"
-                type="text"
-                name="restaurantRating"
-                onChange={handleChange}
-                value={newReview.restaurantRating}
-            />
-          </label>
+              <div className="input-box w50">
+                <label htmlFor="name">
+                  Restaurant name
+                  <select onChange={handleSelect}>
+                    <option value=""> -- Select a Restaurant --</option>
+                    {restaurantsList.map((restaurant) => <option
+                        value={restaurant.name}>{restaurant.name}</option>)}
+                  </select>
+                </label>
+              </div>
 
-          <label htmlFor="review">
-            Your review:
-            <input
-                id="review"
-                type="text"
-                name="review"
-                onChange={handleChange}
-                value={newReview.review}
-            />
-          </label>
+              <label htmlFor="restaurantRating">
+                Rating
+                <input
+                    id="restaurantRating"
+                    type="text"
+                    name="restaurantRating"
+                    onChange={handleChange}
+                    value={newReview.restaurantRating}
+                />
+              </label>
+              <div className="input-box w50">
+                <label htmlFor="review">
+                  Your review:
+                  <input
+                      id="review"
+                      type="text"
+                      name="review"
+                      onChange={handleChange}
+                      value={newReview.review}
+                  />
+                </label>
+              </div>
 
-          <input className="button round" type="submit" value="Submit Review"/>
-        </form>
+
+              <input className="button round" type="submit"
+                     value="Submit Review"/>
+            </form>
+
+          </div>
+        </div>
       </>
   )
 }
