@@ -114,18 +114,17 @@ const ReviewForm = props => {
 
   return (
     <>
-    <div id="review-form" className="for-show-page">
+
+    <div id="review-form" className="font-caps for-show-page">
         <div className="review-form-container">
-            <div >
-            </div>
         </div>
         <div className="review-form-right-side">
             <h2>Tell us about your experience...</h2>
             <Error errors={errors} />
 
-            <form onSubmit={handleSubmit} id="review-form-box" >
 
-                <div className="input-box w50 hidden" >
+            <form onSubmit={handleSubmit} >
+                <div className="user-box">
                     <label htmlFor="name"> Restaurant Name
                      <input id="name"
                      type="text"
@@ -135,7 +134,7 @@ const ReviewForm = props => {
                     </label>
                 </div>
 
-                <div className="input-box w50 hidden">
+                <div className="user-box">
                      <label htmlFor="address">
                         Restaurant Address
                         <input id="address"
@@ -145,7 +144,7 @@ const ReviewForm = props => {
                      </label>
                  </div>
 
-                <div className="input-box w50 hidden">
+                <div className="user-box">
                      <label htmlFor="phoneNumber">
                         Restaurant phone number
                         <input id="phoneNumber"
@@ -156,7 +155,7 @@ const ReviewForm = props => {
                      </label>
                 </div>
 
-                <div className="input-box w50">
+                <div className="user-box">
                       <label htmlFor="restaurantRating">
                         Rating
                         <input
@@ -169,9 +168,9 @@ const ReviewForm = props => {
                       </label>
                 </div>
 
-                <div className="input-box w50">
+                <div className="user-box">
                     <label htmlFor="review">
-                        Your Review:
+                        Your Review
                         <input
                           id="review"
                           type="text"

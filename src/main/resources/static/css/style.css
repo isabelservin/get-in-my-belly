@@ -59,6 +59,7 @@
     text-transform: lowercase;
     font-size: 13pt;
     color: white;
+    font-variant: small-caps;
 
 }
 
@@ -103,7 +104,6 @@ font-size: .75em;
   font-size: 13pt;
   color: #fff;
   font-variant: small-caps;
-
 }
 
 form {

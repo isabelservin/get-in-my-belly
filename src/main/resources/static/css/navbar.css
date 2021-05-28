@@ -30,5 +30,11 @@ li {
    display: block;
    color:#3CAB06;
    font-weight: bold;
+     font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;
+}
 
+.font-caps{
+    font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;
+    font-variant: small-caps;
+    text-transform: lowercase;
 }

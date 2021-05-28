@@ -26,12 +26,10 @@ const ReviewTile = props => {
               {/*<Link to={`/${props.id}/review/new`}>Write a Review</Link>*/}
               Write a Review
             </div>
-
           </div>
-
-          <div className="stars-and-review-date">
-          <span className="review-stars">
-            <ReviewStars
+        <div className="stars-and-review-date">
+            <span className="review-stars">
+              <ReviewStars
                 rating={props.rating}
             />
           </span>

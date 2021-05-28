@@ -88,10 +88,8 @@ const RestaurantForm = props => {
 
   return (
       <>
-      <div id="review-form">
+      <div id="review-form" className="font-caps">
         <div className="review-form-container">
-          <div>
-          </div>
         </div>
         <div className="review-form-right-side">
           <h2>Add a new Restaurant...</h2>
@@ -99,7 +97,7 @@ const RestaurantForm = props => {
 
           <form onSubmit={handleSubmit} id="review-form-box">
 
-            <div className="input-box w50">
+            <div className="user-box">
               <label htmlFor="name">
                 Restaurant Name:
                 <input id="name"
@@ -110,7 +108,7 @@ const RestaurantForm = props => {
               </label>
             </div>
 
-            <div className="input-box w50">
+            <div className="user-box">
               <label htmlFor="category">
                 Restaurant Category:
                 <select
@@ -127,7 +125,7 @@ const RestaurantForm = props => {
               </label>
             </div>
 
-            <div className="input-box w50">
+            <div className="user-box">
               <label htmlFor="imageUrl">
                 Add food image URL:
                 <input
@@ -140,7 +138,7 @@ const RestaurantForm = props => {
               </label>
             </div>
 
-            <div className="input-box w50">
+            <div className="user-box">
               <label htmlFor="phoneNumber">
                 Restaurant Phone number:
                 <input id="phoneNumber"
@@ -151,7 +149,7 @@ const RestaurantForm = props => {
               </label>
             </div>
 
-            <div className="input-box w50">
+            <div className="user-box">
               <label htmlFor="address">
                 Restaurant Address:
                 <input id="address"
@@ -162,7 +160,7 @@ const RestaurantForm = props => {
               </label>
             </div>
 
-            <div className="input-box w50">
+            <div className="user-box">
               <label htmlFor="description">
                 Add description:
                 <input
@@ -175,8 +173,8 @@ const RestaurantForm = props => {
               </label>
             </div>
 
-            <div className="input-box w50">
-              <label htmlFor="healthDeptRating">
+            <div className="user-box">
+              <label htmlFor="healthDeptRating" id="fix-select-labels">
                 (Optional)Health Department Rating:
                 <select
                     id="healthDeptRating"

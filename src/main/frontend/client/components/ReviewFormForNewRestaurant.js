@@ -99,7 +99,7 @@ const ReviewFormForNewRestaurant = props => {
 
   return (
       <>
-        <div id="review-form">
+        <div id="review-form" className="font-caps">
           <div className="review-form-container">
             <div>
             </div>
@@ -110,7 +110,7 @@ const ReviewFormForNewRestaurant = props => {
 
             <form onSubmit={handleSubmit} cid="review-form-box">
 
-              <div className="input-box w50">
+              <div className="user-box">
                 <label htmlFor="name">
                   Restaurant name
                   <select onChange={handleSelect}>
@@ -121,6 +121,7 @@ const ReviewFormForNewRestaurant = props => {
                 </label>
               </div>
 
+            <div className="user-box">
               <label htmlFor="restaurantRating">
                 Rating
                 <input
@@ -131,7 +132,8 @@ const ReviewFormForNewRestaurant = props => {
                     value={newReview.restaurantRating}
                 />
               </label>
-              <div className="input-box w50">
+              </div>
+              <div className="user-box">
                 <label htmlFor="review">
                   Your review:
                   <input
