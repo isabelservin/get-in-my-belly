@@ -105,7 +105,7 @@ const ReviewFormForNewRestaurant = props => {
             </div>
           </div>
           <div className="review-form-right-side">
-            <h2>Add New Review!</h2>
+            <h2>Add New Review</h2>
             <Error errors={errors}/>
 
             <form onSubmit={handleSubmit} cid="review-form-box">
